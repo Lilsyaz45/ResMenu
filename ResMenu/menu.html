@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOJO - Premium Restaurant</title>
+    <link rel="stylesheet" href="menu.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  </head>
+  
+  <body>
+
+  <!-- MENU SECTION ------------------------------------------ -->
+    <section id="menu" class="menu">
+        <div class="menu-container">
+            <!-- GO BACK BUTTON -->
+                <a href="index.html" class="go-back-btn">← Go Back</a>
+
+            <!-- TAB SWITCHER -->
+            <div class="section-tabs">
+                <button class="tab-btn active" data-target="main-section">Main Course & Wine</button>
+                <button class="tab-btn" data-target="beverage-section">Beverage & Desert</button>
+            </div>
+
+            <!-- MAIN COURSE + DESSERT WRAPPER ---------------------- -->
+            <div id="main-section" class="tab-section active">
+                <div class="main-dish">
+                <div class="main-dish-header">
+                    <h3 class="title">Main Course</h3>
+                </div>
+                <div class="food-row">
+                    <!-- dynamically generated main course cards -->
+                </div>
+                </div>
+
+                <div class="wine">
+                <div class="wine-header">
+                    <h3 class="title">Wine</h3>
+                </div>
+                <div class="wine-grid">
+                    <!-- dynamically generated dessert cards -->
+                </div>
+                </div>
+            </div>
+
+            <!-- BEVERAGE + WINE WRAPPER -------------------------- -->
+            <div id="beverage-section" class="tab-section">
+                <div class="drink">
+                <div class="drink-header">
+                    <h3 class="title">Drink</h3>
+                </div>
+                <div class="food-row drink-row">
+                    <!-- dynamically generated drink cards -->
+                </div>
+                </div>
+
+                <div class="dessert">
+                <div class="dessert-header">
+                    <h3 class="title">Dessert</h3>
+                </div>
+                <div class="food-row dessert-row">
+                    <!-- dynamically generated wine cards -->
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MAIN JS ------------------------------------------------ -->
+    <script type="module" src="main.js"></script>
+    <script type="module" src="menu.js"></script>
+
+  </body>
+</html>

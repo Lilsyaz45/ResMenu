@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOJO Premium Restaurant</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  ` <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <!-- NAVBAR ------------------------------------------------ -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-links">
+          <a href="#welcome" class="nav-link">Welcome</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="#about-us" class="nav-link">About us</a>
+        </div>
+        <div class="nav-logo">MOJO</div>
+        <div class="nav-links">
+          <a href="#story" class="nav-link">Story</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="reservation.html" class="nav-link" id="reservation">Reservation</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO SECTION ------------------------------------------ -->
+     <section id="welcome" class="hero">
+        <div class="hero-content" id="heroContent">
+          <div class="hero-text" id="heroText">
+            <!-- Letters inserted by JS -->
+          </div>
+          <div class="hero-image-container">
+            <img id="heroImage" src="" alt="Hero image" />
+          </div>
+        </div>
+     </section>
+
+<section class="special-container">
+
+      <!-- PROMOTION SECTION -->
+      <div class="promotion-section">
+        <div class="promotion-img">
+          <img style="width: 100%; height: 100%;" src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654951/IMAGE_2025-12-02_12_55_45_j3umwk.jpg" alt="">
+        </div>
+        <div class="promotion-head">
+          <h1 style="margin-right: 505px;">Promotion</h1>
+          <p style="margin-right: 515px; font-weight: 800; font-family: 'Inter', sans-serif;">Cambo Set <span style="font-weight: 600; font-family: 'Inter', sans-serif;" >Price: $25</span></p>
+          <p style="margin-right: 368px; font-family: 'Inter', sans-serif;">Christmas special combo set for 2 people</p>
+        </div>
+
+      </div>
+
+      <!-- POPULAR SECTION -->
+      <div class="popular-section">
+        <div class="popular-img">
+          <img style="width: 100%; height: 100%;" src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654183/IMAGE_2025-12-02_12_42_57_ucrxe4.jpg" alt="">
+        </div>
+        <div class="popular-head">
+          <h1 style="margin-right: 510px;">Popular</h1>
+          <p>Duck Breast with Berry Reduction Sauce</p>
+          <p> <span style="font-weight: 600; font-size: 20px; font-family: 'Inter', sans-serif;">Price: $12.99</span></p>
+          
+        </div>
+
+      </div>
+    </section>
+
+    
+    <!-- MENU SECTION -->
+
+    <section id="menu" class="menu-wrapper">
+      <a href="menu.html" style="text-decoration: none;" class="menu-title">Menu</a>
+    </section>
+
+    <!-- Autoplay menu -->
+
+    <section id="autoplay-menu" style="margin-top: 80px; margin-bottom: 120px;">
+        <h1 style="text-align:center; color:white; font-family:'Anton',sans-serif; letter-spacing:2px; margin-bottom:40px;">
+            Featured Menu
+        </h1>
+
+        <div class="carousel-container">
+            <div class="arrow left-arrow" onclick="move(-1)">&#10094;</div>
+            <div class="arrow right-arrow" onclick="move(1)">&#10095;</div>
+
+            <div class="carousel" id="carousel">
+                <div class="card" style="background-image: url('https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654220/IMAGE_2025-12-02_12_43_37_en0gnt.jpg');">
+                    <div class="card-content">
+                        <h3 class="card-title">Rib Pork</h3>
+                        <p class="card-description">with Honey Sauce</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url('https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654212/IMAGE_2025-12-02_12_43_30_l3fr0l.jpg');">
+                    <div class="card-content">
+                        <h3 class="card-title">Tiramisu</h3>
+                        <p class="card-description">Chocolate Flavor</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url('https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654183/IMAGE_2025-12-02_12_42_57_ucrxe4.jpg');">
+                    <div class="card-content">
+                        <h3 class="card-title">Duck Breast</h3>
+                        <p class="card-description">with Berry Reduction Sauce</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url('https://res.cloudinary.com/dm05x6lbk/image/upload/v1764693798/Gemini_Generated_Image_n3njhzn3njhzn3nj_kjmdcs.png');">
+                    <div class="card-content">
+                        <h3 class="card-title">Mixed Berry Soda</h3>
+                        <p class="card-description">Refreshing Drink</p>
+                    </div>
+                </div>
+
+                <div class="card" style="background-image: url('https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654188/IMAGE_2025-12-02_12_43_06_zlzsvs.jpg');">
+                    <div class="card-content">
+                        <h3 class="card-title">Red Wine</h3>
+                        <p class="card-description">Hannetot from Italy</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dots-container" id="dots-container"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+
+    <section id="about-us" class="about-us-wrapper">
+    <a href="aboutus.html" style="text-decoration: none;"><h1 class="about-us-title">About us</h1></a>
+    </section>
+
+    <section class="chef-section">
+      
+        <!-- VIDEO BACKGROUND -->
+        <video class="bg-video" autoplay muted loop playsinline>
+          <source src="https://res.cloudinary.com/dm05x6lbk/video/upload/v1764687787/2025-12-02_22.02.32_oxe2l7.mp4" type="video/mp4"> <!-- Add your video -->
+        </video>
+
+        <!-- INNER SHADOW OVERLAY -->
+        <div class="overlay"></div>
+
+        <!-- TEXT AREA -->
+        <div class="chef-info">
+          <h2 class="chef-name-kh">ម៉េងឃីម</h2>
+          <h3 class="chef-name-en">MengKhim</h3>
+          <p class="chef-title">Head Chef</p>
+        </div>
+
+        <!-- PERSON PHOTO -->
+        <div class="chef-photo">
+          <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1764684814/IMAGE_2025-12-02_14_08_37-removebg-preview_d3qf8r.png" alt="Chef Photo"> <!-- Add your chef image -->
+        </div>
+
+         <!-- STORY SECTION -->
+    </section>
+      <div id="story" class="container">
+        <main class="mission-container">
+            <h1 class="mission-title">OUR STORY</h1>
+            
+            <div class="mission-card">
+                <p class="mission-text">
+                    Mojo Restaurant began its journey in the year 2000 with a simple dream: to bring the finest taste of French dining to Cambodia. From the very beginning, the founders believed that extraordinary food starts with extraordinary ingredients. That is why Mojo has always searched the world for the highest-quality produce, choosing only the best—no matter where it comes from.
+                </p>
+                
+                <div class="signature-container">
+                    <div class="signature-line"></div>
+                    <div class="signature">
+                        <p class="signature-name">Sot Noreaksattya</p>
+                        <p class="signature-title">General manager of Mojo-Restaurant</p>
+                        <p class="signature-location">Norodom Boulevard</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+      <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-title">MENU</h3>
+                <ul class="footer-menu">
+                    <li><a href="#welcome" class="footer-link">WELCOME</a></li>
+                    <li><a href="#menu" class="footer-link">MENU</a></li>
+                    <li><a href="#about-us" class="footer-link">ABOUT US</a></li>
+                    <li><a href="#story" class="footer-link">STORY</a></li>
+                    <li><a href="#" class="footer-link">FAQ</a></li>
+                </ul>
+            </div>
+            
+            <!-- OUR LOCATION Section -->
+            <div class="footer-section">
+                <h3 class="footer-title">OUR LOCATION</h3>
+                <div class="location-info">
+                    <div class="location-item">
+                        <h4 class="location-title">Norodom Boulevard</h4>
+                        <p class="location-address">#317 St. Norodom Blvd (245), Phnom Penh, Cambodia</p>
+                    </div>
+                    <div class="location-item">
+                        <h4 class="location-title">Toul Tompoung</h4>
+                        <p class="location-address">#92 St. 454 Toul Tompoung, Phnom Penh, Cambodia</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CONTACT US Section -->
+            <div id="contact" class="footer-section">
+                <h3 class="footer-title">CONTACT US</h3>
+                <p class="contact-text">We are available on some social below!</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/share/1BbRwnBZMD/?mibextid=wwXIfr" target="_blank" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/tepkengmengkhim?igsh=YThyNXlldzN4c3Bz&utm_source=qr" target="_blank" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://t.me/TEPKHENGMENGKHIM" target="_blank" class="social-link" aria-label="telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-link" aria-label="mail">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+              
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h2 class="footer-logo">MOJO</h3>
+            <p class="footer-copy">&copy; 2025 Mojo.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    
+
+
+
+    <!-- JS ------------------------------------------------ -->
+    <script type="module" src="main.js"></script>
+    <script type="module" src="menu.js"></script>
+    <script src="script.js"></script>
+
+
+  </body>
+</html>
