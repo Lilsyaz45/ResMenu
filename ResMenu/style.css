@@ -494,7 +494,7 @@ body {
 .mission-title {
     font-family: 'Playfair Display', serif;
     font-size: 48px;
-    color: #8b4513;
+    color: black;
     margin-bottom: 40px;
     text-align: center;
     position: relative;
@@ -508,7 +508,7 @@ body {
     display: block;
     width: 100px;
     height: 3px;
-    background-color: #d4a76a;
+    background-color: black;
     margin: 15px auto 0;
     
     
@@ -535,7 +535,9 @@ body {
     left: 0;
     width: 8px;
     height: 100%;
-    background: linear-gradient(to bottom, #a0522d, #d4a76a);
+    background: linear-gradient(to bottom, #3a3a3a, #000000);
+
+
 }
 
 .mission-text {
@@ -553,7 +555,7 @@ body {
 .mission-text::before, .mission-text::after {
     content: '"';
     font-size: 60px;
-    color: #d4a76a;
+    color: black;
     font-family: 'Playfair Display', serif;
     position: absolute;
     opacity: 0.7;
@@ -593,7 +595,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 24px;
     font-weight: 700;
-    color: #8b4513;
+    color: black;
     letter-spacing: 1px;
 }
 
@@ -682,7 +684,7 @@ body {
     left: 0;
     width: 40px;
     height: 2px;
-    background-color: #e74c3c;
+    background-color: white;
 }
 
 /* Menu Styles */
@@ -726,6 +728,9 @@ body {
     margin-bottom: 0.5rem;
     color: #ffffff;
 }
+
+
+
 
 .location-address {
     color: #cccccc;

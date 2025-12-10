@@ -1,50 +1,36 @@
-// aboutus.js
+document.addEventListener("DOMContentLoaded", function () {
+  const boxes = document.querySelectorAll('.box');
 
-gsap.registerPlugin(ScrollTrigger);
+  boxes.forEach(box => {
+    const video = box.querySelector('.box-video');
+    const thumb = box.querySelector('.box-thumb');
 
-// Gate animation
-gsap.to("#gate > div", {
-    opacity: 1,
-    y: 0,
-    duration: 1,
-    scrollTrigger: {
-        trigger: "#gate",
-        start: "top center",
-        end: "center center",
-        scrub: 1,
-        markers: false
-    }
+    let hasPlayed = false; // track if hovered once
+
+    box.addEventListener('mouseenter', () => {
+      box.classList.add('playing');
+      video.play().catch(err => console.log(err));
+
+      if (!hasPlayed) {
+        // permanently hide thumbnail after first hover
+        thumb.style.opacity = "0";
+        thumb.style.pointerEvents = "none";
+        hasPlayed = true;
+      }
+
+      // Remove dark overlay during hover
+      const overlay = box.querySelector('.box-dark-overlay');
+      overlay.style.background = "rgba(0,0,0,0)";
+    });
+
+    box.addEventListener('mouseleave', () => {
+      video.pause();
+
+      // Add slight dark overlay after hover ends
+      const overlay = box.querySelector('.box-dark-overlay');
+      overlay.style.background = "rgba(0,0,0,0.3)";
+    });
+  });
 });
 
-// Chef sections animations
-const chefSections = document.querySelectorAll(".chef-section");
 
-chefSections.forEach((section, index) => {
-    const chefImage = section.querySelector(".chef-image");
-    const chefInfo = section.querySelector(".chef-info");
-    
-    // Alternate direction based on index
-    const imageX = index % 2 === 0 ? 100 : -100;
-    const infoX = index % 2 === 0 ? -100 : 100;
-    
-    // Initial state
-    gsap.set(chefImage, { x: imageX, opacity: 0 });
-    gsap.set(chefInfo, { x: infoX, opacity: 0 });
-    
-    // Pinned animation
-    gsap.timeline({
-        scrollTrigger: {
-            trigger: section,
-            start: "top center",
-            end: "bottom center",
-            scrub: 1,
-            pin: true,
-            markers: false
-        }
-    })
-    .to(chefImage, { x: 0, opacity: 1, duration: 1 }, 0)
-    .to(chefInfo, { x: 0, opacity: 1, duration: 1 }, 0);
-});
-
-// Smooth scroll behavior
-document.documentElement.style.scrollBehavior = "smooth";

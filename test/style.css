@@ -1,0 +1,73 @@
+/* Reset/Basic */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.landing {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Thumbnail image styling */
+.box-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: opacity 0.5s ease;
+}
+#box2{
+    background-color: brown;
+
+}
+
+/* Video styling */
+.box-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  /* Prevent video controls from appearing */
+  pointer-events: none;
+  object-fit: cover;
+   
+}
+
+/* When video is playing (class applied via JS), fade in the video and fade out thumbnail */
+.box.playing .box-video {
+  opacity: 1;
+  
+}
+
+.box.playing .box-thumb {
+  opacity: 0;
+}
+
+/* #box1 .box-video {
+  width: 150%;
+  height: 150%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+} */
+
