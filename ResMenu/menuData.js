@@ -4,11 +4,11 @@ export const menuItems = [
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654217/IMAGE_2025-12-02_12_43_34_qsfmke.jpg", name: "Grilled Shrimp", price: 18 },
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654223/IMAGE_2025-12-02_12_43_40_pauzyg.jpg", name: "Japanese Beef Rice", price: 8 },
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654225/IMAGE_2025-12-02_12_43_42_ajqka2.jpg", name: "Japanese Ramen", price: 8 },
-  { img: "img/fish.jpg", name: "Grilled Salmon", price: 28 },
-  { img: "img/burger.jpg", name: "Classic Burger", price: 15 },
-  { img: "img/fries.jpg", name: "French Fries", price: 6 },
-  { img: "img/ribs.jpg", name: "BBQ Ribs", price: 26 },
-  { img: "img/shrimp.jpg", name: "Shrimp Plate", price: 20 }
+  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765426115/2025-12-11_11.07.51_uhviwu.jpg", name: "បាយភ្លៅមាន់", price: 4 },
+  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765426122/2025-12-11_11.08.00_obamap.jpg", name: "ប្រហុកអាំងលើជ្រុញ", price: 10 },
+  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765426128/2025-12-11_11.08.06_sx0x0t.jpg", name: "មាន់អាំងទឹកឃ្មុំ", price: 20 },
+  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765426135/2025-12-11_11.07.47_ns5ja0.jpg", name: "អាម៉ុកត្រី", price: 5 },
+  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765426142/2025-12-11_11.08.12_zvv1dn.jpg", name: "បាយបឋម", price: 3 }
 ];
 
 export const dessertItems = [
@@ -30,11 +30,11 @@ export const drinkItems = [
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764693798/Gemini_Generated_Image_xhgq8jxhgq8jxhgq_hetcjw.png", name: "Lemon Soda", price: 2.5 },
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764693795/Gemini_Generated_Image_ayc5ilayc5ilayc5_ewjnaj.png", name: "Rashbarry Soda", price: 3 },
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764693972/Gemini_Generated_Image_yzkvr0yzkvr0yzkv_milmpm.png", name: "Passion Soda", price: 3 },
-  { img: "img/fish.jpg", name: "Grilled Salmon", price: 28 },
-  { img: "img/burger.jpg", name: "Classic Burger", price: 15 },
-  { img: "img/fries.jpg", name: "French Fries", price: 6 },
-  { img: "img/ribs.jpg", name: "BBQ Ribs", price: 26 },
-  { img: "img/shrimp.jpg", name: "Shrimp Plate", price: 20 }
+  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765426713/2025-12-11_11.17.41_yfked5.jpg", name: "Matcha Latte", price: 2.5 },
+  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765426721/2025-12-11_11.17.31_cvvz4b.jpg", name: "Ice Latte", price: 2.5 },
+  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765426727/2025-12-11_11.18.03_ocjhrw.jpg", name: "Strawberry Milk", price: 2.5 },
+  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765427185/d865c3416ecdb51798199ff2a61dfe6a_kiqfov.jpg", name: "Cocktail", price: 5 },
+  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765427193/499921719_1005815115097589_6869948187989125085_n_lra4xs.jpg", name: "Hanuman Beer", price: 3.5 }
 ];
 
 export const wineItems = [
