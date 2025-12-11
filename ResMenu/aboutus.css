@@ -1,172 +1,105 @@
-/* Reset/Basic */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+html, body {
+    margin: 0;
+    padding: 0;
 }
 
-/* Center text between boxes */
-.center-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Serif', Georgia, serif;
-  font-size: 5rem; /* main title size */
-  color: white;
-  z-index: 10;
-  pointer-events: none;
-  text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
-  text-align: center;
-  margin-top: 2em;
+/* NAVBAR -------------------------------------------------- */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-/* Subtitle below MOJO */
-.center-text .subtitle {
-  display: block;
-  font-size: 2rem; /* adjust subtitle size */
-  letter-spacing: 0.15em;
-  margin-top: 0.3em; /* spacing between MOJO and subtitle */
-  color: rgba(255, 255, 255, 0.8); /* slightly transparent */
-  text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
-  margin-bottom: -10em;
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.center-text .visit-us {
-  display: inline-block;
-  margin-top: 40em;
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #1a1a1a;
   font-size: 1rem;
-  font-family: 'Inter', sans-serif;
-  color: white;
-  text-decoration: none; /* remove default underline */
-  position: relative; /* needed for pseudo-element */
-  padding-bottom: 2px; /* space for underline */
-  pointer-events: auto;
-  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+  position: relative;
 }
 
-/* Create the underline */
-.center-text .visit-us::after {
+.nav-link:hover {
+  opacity: 0.6;
+}
+
+.nav-link::after {
   content: '';
   position: absolute;
+  bottom: -5px;
   left: 0;
-  bottom: 0;
-  height: 2px; /* thickness of underline */
+  width: 0;
+  height: 1px;
+  background: #1a1a1a;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
   width: 100%;
-  background-color: white; /* underline color */
-  transition: transform 0.3s ease;
-  transform-origin: right;
 }
-
-/* On hover, slide the underline away */
-.center-text .visit-us:hover::after {
-  transform: scaleX(0); /* shrink underline horizontally */
-  transform-origin: left;
-}
-
-
-
-
-body, html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  /* allow scrolling */
-  overflow-x: hidden; /* optional to prevent horizontal scroll */
-  overflow-y: auto;
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
-.landing {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
+#gate {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
-.box {
-  position: relative;
-  flex: 1;
-  overflow: hidden;
-  cursor: pointer;
-  
+* {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .will-animate {
+            will-change: transform;
+        }
+/* FOOTER */
+.content-placeholder {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-/* Thumbnail image styling */
-.box-thumb {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: opacity 0.5s ease;
-  position: absolute;
-  top: 0;
-  left: 0;
-  filter: brightness(0.6);
+.content-placeholder h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #222;
 }
 
-/* Video overlay for dark effect after hover */
-.box-dark-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0); /* transparent by default */
-  transition: background 0.5s ease;
-  pointer-events: none;
-  z-index: 2;
+.content-placeholder p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #555;
 }
 
-.box-thumb,
-.box-video {
-  position: relative;
-  z-index: 0;
-}
-
-/* Dark overlay after hover ends */
-.box:not(:hover) .box-dark-overlay {
-  background: rgba(0,0,0,0.3); /* adjust darkness */
-}
-
-/* Remove overlay when video plays (hover) */
-.box:hover .box-dark-overlay {
-  background: rgba(0,0,0,0);
-}
-
-#box2{
-  background-color: brown;
-}
-
-/* Video styling */
-.box-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  opacity: 1; /* already visible after first hover */
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-}
-
-/* When video is playing (class applied via JS), fade in the video and fade out thumbnail */
-.box.playing .box-video {
-  opacity: 1;
-}
-
-.box.playing .box-thumb {
-  opacity: 0;
-}
-
-/* -------------------------------- Visit Us Page -------------------------------- */
-#visit-us-page {
-  width: 100%;
-  background-color: #fff;
-  padding: 50px 0; /* space at top and bottom */
-  box-sizing: border-box;
-}
-
-
-/* Footer Dior Style */
+/* Footer Styles */
 .footer {
     background-color: #ffffff; /* white background */
     color: #000000; /* black text */
