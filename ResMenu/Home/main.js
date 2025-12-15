@@ -84,6 +84,7 @@ renderSlide(current);
 setInterval(() => {
   renderSlide(current);
   current = (current + 1) % slides.length;
+  renderSlide(current);
 }, 4000);
 
 
