@@ -128,7 +128,14 @@ html, body {
   min-height: 100vh; /* desktop safe */
   padding-block: 4rem; /* space for animation */
 }
-
+.chef-image img {
+    width: auto; /* Let height control the size */
+    height: 100vh; /* Full viewport height */
+    max-height: 800px; /* Optional: limit maximum height */
+    object-fit: cover; /* Crop to fit height */
+    object-position: center; /* Center the crop */
+    margin-left: 100px;
+}
 /* MOBILE FIX */
 @media (max-width: 768px) {
   .chef-section {
@@ -151,6 +158,9 @@ html, body {
   .chef-image img {
     max-height: 500px;
     
+  }
+  #title {
+    font-size: 3rem;
   }
 }
 

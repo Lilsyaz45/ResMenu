@@ -2,7 +2,7 @@ export const menuItems = [
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764643892/beef_p7zjkq.jpg", name: "Grilled Steak", price: 25 },
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654220/IMAGE_2025-12-02_12_43_37_en0gnt.jpg", name: "Rib Pork", price: 20 },
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654217/IMAGE_2025-12-02_12_43_34_qsfmke.jpg", name: "Grilled Shrimp", price: 18 },
-  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654223/IMAGE_2025-12-02_12_43_40_pauzyg.jpg", name: "Japanese Beef Rice", price: 8 },
+  { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654223/IMAGE_2025-12-02_12_43_40_pauzyg.jpg", name: "Japanese Rice", price: 8 },
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654225/IMAGE_2025-12-02_12_43_42_ajqka2.jpg", name: "Japanese Ramen", price: 8 },
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765426115/2025-12-11_11.07.51_uhviwu.jpg", name: "បាយភ្លៅមាន់", price: 4 },
   { img: "https://res.cloudinary.com/dm05x6lbk/image/upload/v1765426122/2025-12-11_11.08.00_obamap.jpg", name: "ប្រហុកអាំងលើជ្រុញ", price: 10 },

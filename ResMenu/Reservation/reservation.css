@@ -1,3 +1,27 @@
+/* GO BACK BUTTON ------------------------------------------ */
+.go-back-btn {
+  align-self: flex-start;
+  margin-bottom: -50px;
+  margin-left: 100px;
+  /* padding: 20px 20px; */
+  color: white;
+  border-radius: 8px;
+  font-family: 'Anton', sans-serif;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  z-index: 2; 
+  position: relative; 
+}
+
+.go-back-btn:hover {
+  background: transparent;
+  color: rgb(225, 220, 191);
+  transform: scale(1.05);
+  border-color: rgb(225, 220, 191);
+}
+
 /* RESERVATION SECTION --------------------------------------- */
 .reservation {
     position: relative; /* needed for overlay */
@@ -81,8 +105,8 @@
 }
 
 .reservation textarea {
-    width: 100%;
-    max-width: 100%;
+    width: 94%;
+    
     min-width: 0;
     height: clamp(80px, 20vw, 160px);
     resize: vertical;
@@ -117,6 +141,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
     width: fit-content;
+    margin-left: 250px;
 }
 
 .reservation .btn:hover {
@@ -158,10 +183,17 @@
 @media (max-width: 600px) {
     .reservation form {
         padding: 12px;
+        width: 80%;
     }
     .reservation .input-box {
         flex-direction: column;
         gap: 10px;
+    }
+    .reservation textarea {
+        width: 89%;
+    }
+    .reservation .btn {
+        margin-left: 90px;
     }
 }
 
