@@ -1,7 +1,7 @@
 /* RESERVATION SECTION --------------------------------------- */
 .reservation {
     position: relative; /* needed for overlay */
-    background: url('img/bg1.jpg') no-repeat center center;
+    background: url('/ResMenu/img/bg1.jpg') no-repeat center center;
     background-size: cover;
     padding: 48px 0px;
     display: flex;
@@ -43,7 +43,7 @@
 .reservation form {
     width: 100%;
     max-width: 700px;
-    padding: 40px;
+    padding: clamp(16px, 5vw, 40px);
     border-radius: 20px; /* rounded corners */
     background: rgba(255, 255, 255, 0.15); /* transparent background */
     backdrop-filter: blur(10px); /* blur effect */
@@ -54,9 +54,6 @@
     box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
 }
-
-
-
 
 /* Input rows */
 .reservation .input-box {
@@ -72,7 +69,7 @@
 .reservation textarea {
     flex: 1;
     padding: 16px 20px;
-    font-size: 1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
     color: white; /* black text */
     background: transparent; /* white semi-transparent blur */
     backdrop-filter: transparent; 
@@ -83,13 +80,13 @@
     transition: all 0.3s ease;
 }
 
-
 .reservation textarea {
-    width: 655px;
-    height: 160px;
-    resize: none;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: clamp(80px, 20vw, 160px);
+    resize: vertical;
     margin-top: 10px;
-    
 }
 
 /* Focus style */
@@ -157,11 +154,23 @@
     100% { opacity: 0; transform: translate(-50%, -20px); }
 }
 
-
 /* Responsive */
 @media (max-width: 600px) {
+    .reservation form {
+        padding: 12px;
+    }
     .reservation .input-box {
         flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-height: 500px) {
+    .reservation form {
+        padding: 8px;
+    }
+    .reservation textarea {
+        height: 60px;
     }
 }
 

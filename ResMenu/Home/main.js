@@ -3,7 +3,7 @@
 const slides = [
   {
     letters: ["S","T","E","A","K"],
-    imgSrc: "img/hero.png",
+    imgSrc: "/ResMenu/img/hero.png",
     imgAlt: "Premium Steak",
     scale: 1.4,
     offsetY: "-50%",
@@ -11,7 +11,7 @@ const slides = [
   },
   {
     letters: ["P","A","S","T","A"],
-    imgSrc: "img/hero1.png",
+    imgSrc: "/ResMenu/img/hero1.png",
     imgAlt: "Pasta Dish",
     scale: 1.05,
     offsetY: "-50%",

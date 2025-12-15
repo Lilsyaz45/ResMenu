@@ -1,4 +1,3 @@
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     // Add subtle animation to the mission card on hover
     const missionCard = document.querySelector('.mission-card');

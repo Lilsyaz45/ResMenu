@@ -1,3 +1,62 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR -------------------------------------------------- */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  opacity: 0.6;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #1a1a1a;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
 
 /* RESERVATION BUTTON -------------------------------------- */
 
@@ -32,211 +91,85 @@
   color: #1a1a1a;
 }
 
-/* GO BACK BUTTON ------------------------------------------ */
-.go-back-btn {
-  align-self: flex-start;
-  margin-bottom: 20px;
-  padding: 20px 20px;
-  color: white;
+/* RESERVATION BUTTON -------------------------------------- */
+
+#reservation {
+  display: flex;
+  border: 2px solid black;
   border-radius: 8px;
-  font-family: 'Anton', sans-serif;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  text-decoration: none;
-  transition: 0.3s ease;
-  
-}
-
-.go-back-btn:hover {
-  background: transparent;
-  color: rgb(225, 220, 191);
-  transform: scale(1.05);
-  border-color: rgb(225, 220, 191);
-}
-
-/* MENU SECTION -------------------------------------------- */
-
-.menu-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  background-color: #1A1A1A;
-  border: 1px solid white;
-  border-radius: 0px;
-  padding: 40px 20px 80px;
-}
-
-.menu-title {
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  color: rgb(225, 220, 191);
-  margin: 20px 0 30px;
-  gap: 2rem;
-}
-
-.section-pick {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
-}
-
-/* MAIN COURSE + DESSERT ---------------------------------- */
-
-.main-dish,
-.dessert,
-.drink,
-.wine {
-  width: 1400px;
-  padding-bottom: 30px;
-}
-
-.main-dish-header,
-.dessert-header,
-.drink-header,
-.wine-header {
-  width: 1400px;
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-}
-
-.title {
-  color: white;
-  font-size: 30px;
-  font-family: 'Anton', sans-serif;
-  font-weight: bold;
-  letter-spacing: 0.01rem;
-}
-
-/* SCROLLABLE FOOD ROW ------------------------------------- */
-
-.food-row {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 4rem;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  width: 1400px;
-  scroll-behavior: smooth;
-}
-
-/* FOOD CARD ------------------------------------------------ */
-
-.food-card {
-  min-width: 300px;
-  min-height: 450px;
-  background: #F5F5F5;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.food-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-.food-card img {
-  width: 100%;
-  height: 450px;
-  object-fit: cover;
-  border-radius: 12px 12px 0 0;
-}
-
-.food-card h3 {
-  margin-top: 10px;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
   color: black;
-}
-
-.food-card p {
-  margin-top: 5px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  color: black;
-  font-family: "Roboto", sans-serif;
-}
-
-.dessert-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-}
-
-.dessert-row .food-card {
-  width: 300px;
-}
-
-/* WINE GRID ----------------------------------------------- */
-
-.wine-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-}
-
-.wine-grid .food-card {
-  width: 300px;
-}
-
-/* LUXURY TAB BAR ------------------------------------------- */
-
-.section-tabs {
-  display: flex;
+  width: 120px;
+  align-items: center;
   justify-content: center;
-  gap: 2rem;
-  margin-bottom: 20px; /* reduce space under tabs */
+  transition: 0.3s ease-in-out;
 }
 
-.tab-btn {
-  padding: 10px 25px;
-  font-size: 1rem;
-  color: rgb(225, 220, 191);
-  background: transparent;
-  border: 2px solid rgb(225, 220, 191);
-  border-radius: 10px;
-  font-family: 'Anton', sans-serif;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.tab-btn:hover {
-  transform: scale(1.08);
-  background: rgba(225, 220, 191, 0.15);
-}
-
-.tab-btn.active {
-  background: rgb(225, 220, 191);
-  color: rgb(136, 43, 56);
-}
-
-/* SLIDE SWITCH ANIMATION ---------------------------------- */
-
-.tab-section {
-  opacity: 0;
-  transform: translateX(40px);
-  transition: 0.5s ease;
-  pointer-events: none;
-  display: none;
-}
-
-.tab-section.active {
+#reservation:hover {
+  transform: scale(1.05);
+  background-color: black;
   opacity: 1;
-  transform: translateX(0);
-  pointer-events: auto;
-  display: block;
-
+  color: white;
 }
 
+#reservation::after {
+  display: none !important;
+}
+
+/* LOGO ---------------------------------------------------- */
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+}
+
+.chef-section {
+  min-height: 100vh; /* desktop safe */
+  padding-block: 4rem; /* space for animation */
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .chef-section {
+    min-height: auto;     /* ✅ allow content height */
+    padding-block: 6rem;  /* ✅ extra space */
+    align-items: flex-start; /* stop vertical centering */
+  }
+}
+
+.chef-info {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .chef-info {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .chef-image img {
+    max-height: 500px;
+    
+  }
+}
+
+
+
+
+#gate {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+* {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .will-animate {
+            will-change: transform;
+        }
 /* FOOTER */
 .content-placeholder {
     flex: 1;
@@ -403,4 +336,61 @@
     font-family: 'Serif', Georgia, serif;
 }
 
+/* --- Responsive About Us --- */
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .nav-logo {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+}
+
+@media (max-width: 500px) and (max-width: 767px) {
+.nav-container { flex-direction: column; align-items: center; gap: 10px; padding: 1rem; }
+.nav-logo { font-size: 1.6rem; }
+}
+
+section#gate,
+.chef-section {
+    min-height: 60vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    padding: clamp(16px, 5vw, 40px) 0;
+}
+
+@media (max-width: 768px) {
+    section#gate,
+    .chef-section {
+        min-height: 320px;
+        padding: 12px 0;
+    }
+    .container {
+        padding: 0 8px;
+    }
+}
+
+@media (max-height: 500px) {
+    section#gate,
+    .chef-section {
+        min-height: 180px;
+        padding: 4px 0;
+    }
+}
+
+.chef-info h2, .chef-info h3 {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+}
+.chef-info p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
 

@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,7 +30,7 @@ body {
 
 .nav-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2px auto 0 auto;
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -99,34 +100,47 @@ body {
 .nav-logo {
   font-size: 1.8rem;
   font-weight: 500;
-  letter-spacing: 2px;
   color: #1a1a1a;
+  letter-spacing: 2px;
+  margin-left: 50px;
+  
 }
+
+
 
 /* HERO SECTION -------------------------------------------- */
 
 .hero {
-  min-height: 100vh;
+  min-height: 463px;
   position: relative;
   background: white;
   overflow: hidden;
+  padding-top: clamp(40px, 10vw, 120px);
+  margin-bottom: 200px;
 }
+
+
 
 .hero-content {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  min-height: 60vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding: clamp(20px, 5vw, 60px) 0;
+  
 }
 
 .hero-text {
   display: flex;
-  gap: 4rem;
+  gap: clamp(1rem, 5vw, 4rem);
   position: relative;
   z-index: 1;
+  font-size: clamp(2rem, 8vw, 6rem);
 }
 
 .hero-title {
@@ -150,81 +164,376 @@ body {
 .hero-image-container img {
   display: block;
   width: auto;
-  max-width: 90vw;
-  max-height: 90vh;
+  max-width: 100%;
+  max-height: 100vh;
 }
 
 
-
+/* -------------------------------- Promotion & Popular Container -------------------------------- */
+.special-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(40px, 8vw, 100px);
+}
 
 /* -------------------------------- Promotion -------------------------------- */
-.promotion-section{
+.promotion-section {
   width: 100%;
-  height: 600px;
   display: flex;
+  height: 600px;
   align-items: center;
   background-color: white;
+  justify-content: space-between;
+  position: relative; 
 }
-.promotion-section .promotion-img{
+
+.promotion-section .promotion-img {
   position: absolute;
-  z-index: 20;
   width: 450px;
+  max-width: 450px;
   height: 600px;
-  background-color: green;
+  aspect-ratio: 450 / 600;
+  z-index: 20;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+  border-radius: 8px;
+  overflow: hidden;
   margin-left: 120px;
 }
-.promotion-section h1{
-  margin-top: 100px;
+
+.promotion-section .promotion-img img {
+  width: 100%;
+  object-fit: cover;
 }
-.promotion-head{
+
+.promotion-head {
   width: 100%;
   height: 400px;
   color: black;
   background-color: white;
-  padding-right: 30px;
   display: flex;
   flex-direction: column;
   align-items: end;
+  text-align: end;
   filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+  box-sizing: border-box; 
+  margin-top: 100px;
+}
+
+.promotion-section h1 {
+  margin-top: 100px;
+  margin-right: 50vh;
+}
+
+.promotion-section p {
+  margin-right: 50vh;
+  width: 100%; 
 }
 
 /* -------------------------------- Popular -------------------------------- */
-.popular-section{
+.popular-section {
   width: 100%;
-  height: 600px;
   display: flex;
+  height: 600px;
   align-items: center;
   background-color: white;
-  flex-direction: row-reverse;
-  margin-top: 100px;
-  
-  
+  justify-content: space-between; 
+  position: relative; 
 }
-.popular-section .popular-img{
+
+.popular-section .popular-img {
   position: absolute;
-  z-index: 20;
   width: 450px;
+  max-width: 450px;
   height: 600px;
-  background-color: green;
-  margin-left: 120px;
-  right: 120px;
-  left: auto;
+  aspect-ratio: 450 / 600;
+  z-index: 20;
+  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+  border-radius: 8px;
+  overflow: hidden;
+  right: 120px; 
+  left: auto; 
+  margin-left: 0; 
 }
-.popular-section h1{
-  margin-top: 100px;
-}
-.popular-head{
+
+.popular-section .popular-img img {
   width: 100%;
+  height: 100%; 
+  object-fit: cover;
+}
+
+.popular-head {
+  width: 100%; 
   height: 400px;
   color: black;
   background-color: white;
-  padding-left: 130px;
+  padding-left: 120px; 
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
+  text-align: left;
   filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
-
+  box-sizing: border-box;
+  margin-top: 100px;
+  margin-left: 0;
+  order: 1; 
 }
+
+.popular-section h1 {
+  margin-left: 20vh;
+  width: 100%;
+  margin-top: 15vh;
+}
+
+.popular-section p {
+  margin-left: 20vh;
+  width: 100%;
+}
+
+/* Tablet and larger: 2-column layout */
+@media (min-width: 768px) {
+  .special-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .promotion-section,
+  .popular-section {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .promotion-section .promotion-img,
+  .popular-section .popular-img {
+    max-width: none;
+    flex: 0 0 40%;
+    aspect-ratio: auto;
+  }
+
+  .promotion-head,
+  .popular-head {
+    flex: 1;
+  }
+}
+
+/* Mobile: Stack vertically with equal height sections */
+@media (max-width: 767px) {
+  .special-container {
+    padding: 20px;
+    gap: 60px;
+    height: 2000px; /* Set total height to 1800px */
+    
+  }
+  .promotion-section,
+  .popular-section {
+    height: calc(2000px / 2 - 30px); /* Each section gets half minus half the gap */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .promotion-section .promotion-img,
+  .popular-section .popular-img {
+    position: relative;
+    width: 100%;
+    max-width: 320px; /* Adjust width to maintain aspect ratio */
+    height: 480px; /* Set fixed height */
+    aspect-ratio: 320 / 480; /* Maintain 2:3 aspect ratio */
+    margin-left: auto;
+    margin-right: auto;
+    left: auto;
+    right: auto;
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.2));
+  }
+  
+  .promotion-section .promotion-img img,
+  .popular-section .popular-img img {
+    width: 100%;
+    height: 480px; /* Ensure image fills the container */
+    object-fit: cover;
+  }
+  
+  .promotion-head,
+  .popular-head {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-height: 200px; /* Ensure text container has minimum height */
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 20px;
+    align-items: center;
+    text-align: center;
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  
+  .promotion-section h1,
+  .popular-section h1 {
+    margin: 0 0 20px 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+  
+  .promotion-section p,
+  .popular-section p {
+    margin: 10px 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    width: 100%;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+  
+  /* Reset specific padding for popular-head on mobile */
+  .popular-head {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Reset order for mobile */
+  .popular-head {
+    order: 2;
+  }
+  
+  .popular-section .popular-img {
+    order: 1;
+  }
+}
+
+/* Tablet and larger: 2-column layout */
+@media (min-width: 768px) {
+  .special-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .promotion-section,
+  .popular-section {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .promotion-section .promotion-img,
+  .popular-section .popular-img {
+    max-width: none;
+    flex: 0 0 40%;
+    aspect-ratio: auto;
+  }
+
+  .promotion-head,
+  .popular-head {
+    flex: 1;
+  }
+}
+
+/* Mobile: Stack vertically with equal height sections */
+@media (max-width: 500px) {
+  .special-container {
+    padding: 20px;
+    gap: 60px;
+    height: 2000px; /* Set total height to 1800px */
+    
+  }
+  .promotion-section,
+  .popular-section {
+    height: calc(2000px / 2 - 30px); /* Each section gets half minus half the gap */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  
+  .promotion-section .promotion-img,
+  .popular-section .popular-img {
+    position: relative;
+    width: 100%;
+    max-width: 320px; /* Adjust width to maintain aspect ratio */
+    height: 480px; /* Set fixed height */
+    aspect-ratio: 320 / 480; /* Maintain 2:3 aspect ratio */
+    margin-left: auto;
+    margin-right: auto;
+    left: auto;
+    right: auto;
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.2));
+  }
+
+  .promotion-img{
+    min-height: 480px;
+  }
+  
+  .promotion-section .promotion-img img,
+  .popular-section .popular-img img {
+    width: 100%;
+    height: 100%; /* Ensure image fills the container */
+    object-fit: cover;
+  }
+  
+  .promotion-head,
+  .popular-head {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    min-height: 00px; /* Ensure text container has minimum height */
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 20px;
+    align-items: center;
+    text-align: center;
+    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.2));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  
+  .promotion-section h1,
+  .popular-section h1 {
+    margin: 0 0 20px 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+  }
+  
+  .promotion-section p,
+  .popular-section p {
+    margin: 10px 0;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    width: 100%;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+  
+  /* Reset specific padding for popular-head on mobile */
+  .popular-head {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Reset order for mobile */
+  .popular-head {
+    order: 2;
+  }
+  
+  .popular-section .popular-img {
+    order: 1;
+  }
+}
+
 
 
 
@@ -238,7 +547,7 @@ body {
 }
 
 .menu-title {
-  font-size: 48px;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-family: "Georgia", serif;
   font-weight: bold;
   color: black;
@@ -247,12 +556,23 @@ body {
 
 
 .chef-section {
-  width: 1440px;
-  height: 680px;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 680px;
   margin-top: 10px;
   position: relative;
   overflow: hidden;
   border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-height: 500px) {
+  .chef-section {
+    max-height: 400px;
+    min-height: auto;
+  }
 }
 
 /* FULL BACKGROUND VIDEO */
@@ -287,7 +607,7 @@ body {
 }
 
 .chef-name-kh {
-  font-size: 42px;
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
   margin-bottom: 0px;
   font-family: "Battambang", system-ui;
   font-weight: lighter;
@@ -295,7 +615,7 @@ body {
 }
 
 .chef-name-en {
-  font-size: 24px;
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
   margin-bottom: 0px;
   font-weight: lighter;
   margin-top: -15px;
@@ -311,23 +631,38 @@ body {
 .chef-photo {
   margin-bottom: -8px;
   position: absolute;
-  right: 40px;
+  right: clamp(10px, 5vw, 40px);
   bottom: 0;
   z-index: 3;
-  filter: brightness(1.0) contrast(1.0) ;
-  
+  filter: brightness(1.0) contrast(1.0);
+  max-width: 100%;
+  height: auto;
 }
 
 .chef-photo img {
-  height: 650px;
+  max-width: 100%;
+  height: auto;
+  max-height: 650px;
   object-fit: contain;
   filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.45));
-  transition: transform 0.35s ease; /* smooth zoom */
+  transition: transform 0.35s ease;
+}
+
+@media (max-width: 768px) {
+  .chef-photo img {
+    max-height: 400px;
+  }
+}
+
+@media (max-height: 500px) {
+  .chef-photo img {
+    max-height: 300px;
+  }
 }
 
 /* HOVER EFFECT */
 .chef-photo:hover img {
-  transform: scale(1.05); /* a little bigger */
+  transform: scale(1.05);
   filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.674));
 }
 
@@ -468,7 +803,7 @@ body {
 }
 
 .about-us-title {
-  font-size: 48px;
+  font-size: clamp(1.5rem, 5vw, 3rem);
   font-family: "Georgia", serif;
   font-weight: bold;
   color: black;
@@ -494,7 +829,7 @@ body {
 
 .mission-title {
     font-family: 'Playfair Display', serif;
-    font-size: 48px;
+    font-size: clamp(1.5rem, 5vw, 3rem);
     color: black;
     margin-bottom: 40px;
     text-align: center;
@@ -542,7 +877,7 @@ body {
 }
 
 .mission-text {
-    font-size: 22px;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
     line-height: 1.8;
     color: #444;
     font-style: italic;
@@ -701,7 +1036,7 @@ body {
     color: #cccccc;
     text-decoration: none;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
     transition: color 0.3s, padding-left 0.3s;
     display: inline-block;
 }
@@ -730,12 +1065,17 @@ body {
     color: #ffffff;
 }
 
-
+.location-title a{
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
 
 
 .location-address {
     color: #cccccc;
-    font-size: 0.95rem;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
     line-height: 1.5;
 }
 
@@ -743,7 +1083,7 @@ body {
 .contact-text {
     color: #cccccc;
     margin-bottom: 1.5rem;
-    font-size: 1rem;
+    font-size: clamp(0.95rem, 2.5vw, 1.1rem);
 }
 
 .social-links {
@@ -770,21 +1110,90 @@ body {
     transform: translateY(-3px);
 }
 .footer-bottom {
-    border-top: 1px solid #333;
+    border-top: 1px solid #e0e0e0;
     padding-top: 0.5rem;
     margin-top: 1rem;
     text-align: center;
-    font-size: small;
+    font-size: 0.2rem;
+    color: white;
+   
+    
 }
+.footer-logo{
+    font-family: 'Serif', Georgia, serif;
+}
+
 
 
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .nav-logo {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-container { height: 280px; }
+  .card { width: 140px; height: 180px; }
+  .arrow { width: 32px; height: 32px; font-size: 16px; }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  .footer-section {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-height: 500px) {
+  .hero, .hero-content, .chef-section {
+    min-height: 320px;
+    max-height: 400px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .carousel-container { height: 180px; }
+  .card { height: 120px; }
+  .chef-photo img { max-height: 180px; }
+}
+
+@media (max-width: 500px) and (max-width: 767px) {
+.nav-container { flex-direction: column; align-items: center; gap: 10px; padding: 1rem; }
+.nav-logo { font-size: 1.6rem; }
+
+.promotion-section { flex-direction: column; height: auto; padding: 5px 5px; } 
+.promotion-section .promotion-img { width: 300px; height: 250px; margin: 0 auto 15px; } 
+.promotion-section .p{ width: 100px; display: flex; text-align: center; justify-content: center; margin-left: 100px; margin-right:10px ; padding: 100px;}
+.popular-section { flex-direction: column; height: auto; padding: 25px 15px; } 
+.popular-section .popular-img { width: 85%; height: auto; margin: 0 auto 15px; }
+}
+
+ 
+
+
+@media (max-width: 900px) {
     .carousel-container { height: 450px; }
     .card { width: 240px; height: 350px; }
     .arrow { width: 50px; height: 50px; font-size: 24px; }
+
 }
+
+
 
 @media (max-width: 600px) {
     .carousel-container { height: 400px; }
@@ -842,6 +1251,16 @@ body {
     .content-placeholder h1 {
         font-size: 2rem;
     }
+}
+
+h1, .menu-title, .about-us-title, .mission-title {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+}
+h2, .chef-name-kh, .chef-name-en {
+  font-size: clamp(1.2rem, 4vw, 2.5rem);
+}
+p, .mission-text, .footer-link, .location-address, .contact-text {
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
 }
 
 

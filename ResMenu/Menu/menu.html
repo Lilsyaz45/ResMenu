@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu</title>
-    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="menu.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -24,15 +23,19 @@
     <nav class="navbar">
       <div class="nav-container">
         <div class="nav-links">
-          <a href="index.html" class="nav-link">Welcome</a>
-          <a href="menu.html" class="nav-link">Menu</a>
-          <a href="aboutus.html" class="nav-link">About us</a>
+          <a href="/ResMenu/Welcome/welcome.html" class="nav-link">Welcome</a>
+          <a href="/ResMenu/Menu/menu.html" class="nav-link">Menu</a>
+          <a href="/ResMenu/Aboutus/aboutus.html" class="nav-link">About us</a>
         </div>
-        <div class="nav-logo">MOJO</div>
-        <div class="nav-links">
-          <a href="#story" class="nav-link">Story</a>
-          <a href="#contact" class="nav-link">Contact</a>
-          <a href="reservation.html" class="nav-link" id="reservation">Reservation</a>
+        <div class="nav-logo">
+          <a href="index.html" style="text-decoration: none; color: black;">
+          MOJO
+          </a>
+        </div>
+        <div  id="nav-2" class="nav-links">
+          <a href="/ResMenu/Home/index.html#story" class="nav-link">Story</a>
+          <a href="/ResMenu/Home/index.html#story" class="nav-link">Contact</a>
+          <a href="/ResMenu/Reservation/reservation.html" class="nav-link" id="reservation">Reservation</a>
         </div>
       </div>
     </nav>
@@ -49,46 +52,51 @@
                 <button class="tab-btn" data-target="beverage-section">Beverage & Desert</button>
             </div>
 
-            <!-- MAIN COURSE + DESSERT WRAPPER ---------------------- -->
+            <!-- MAIN COURSE + WINE WRAPPER ---------------------- -->
+            <!-- MAIN COURSE + WINE -->
             <div id="main-section" class="tab-section active">
-                <div class="main-dish">
+
+            <div class="main-dish">
                 <div class="main-dish-header">
-                    <h3 class="title">Main Course</h3>
+                <h3 class="title">Main Course</h3>
                 </div>
                 <div class="food-row">
-                    <!-- dynamically generated main course cards -->
-                </div>
-                </div>
-
-                <div class="wine">
-                <div class="wine-header">
-                    <h3 class="title">Wine</h3>
-                </div>
-                <div class="wine-grid">
-                    <!-- dynamically generated dessert cards -->
-                </div>
+                <!-- main cards -->
                 </div>
             </div>
 
-            <!-- BEVERAGE + WINE WRAPPER -------------------------- -->
+            <div class="wine">
+                <div class="wine-header">
+                <h3 class="title">Wine</h3>
+                </div>
+                <div class="food-row wine-row">
+                <!-- wine cards -->
+                </div>
+            </div>
+
+            </div>
+
+            <!-- DRINK + DESSERT -->
             <div id="beverage-section" class="tab-section">
-                <div class="drink">
+
+            <div class="drink">
                 <div class="drink-header">
-                    <h3 class="title">Drink</h3>
+                <h3 class="title">Drink</h3>
                 </div>
                 <div class="food-row drink-row">
-                    <!-- dynamically generated drink cards -->
+                <!-- drink cards -->
                 </div>
-                </div>
+            </div>
 
-                <div class="dessert">
+            <div class="dessert">
                 <div class="dessert-header">
-                    <h3 class="title">Dessert</h3>
+                <h3 class="title">Dessert</h3>
                 </div>
                 <div class="food-row dessert-row">
-                    <!-- dynamically generated wine cards -->
+                <!-- dessert cards -->
                 </div>
-                </div>
+            </div>
+
             </div>
 
         </div>
@@ -100,11 +108,11 @@
             <div class="footer-section">
                 <h3 class="footer-title">MENU</h3>
                 <ul class="footer-menu">
-                    <li><a href="index.html" class="footer-link">WELCOME</a></li>
-                    <li><a href="#menu" class="footer-link">MENU</a></li>
-                    <li><a href="aboutus.html" class="footer-link">ABOUT US</a></li>
-                    <li><a href="index.html#story" class="footer-link">STORY</a></li>
-                    <li><a href="welcome.html" class="footer-link">HOME</a></li>
+                    <li><a href="/ResMenu/Welcome/welcome.html" class="footer-link">WELCOME</a></li>
+                    <li><a href="/ResMenu/Menu/menu.html" class="footer-link">MENU</a></li>
+                    <li><a href="/ResMenu/Aboutus/aboutus.html" class="footer-link">ABOUT US</a></li>
+                    <li><a href="#story" class="footer-link">STORY</a></li>
+                    <li><a href="/ResMenu/Reservation/reservation.html" class="footer-link">RESERVATION</a></li>
                 </ul>
             </div>
             
@@ -159,6 +167,8 @@
     <!-- MAIN JS ------------------------------------------------ -->
     <script type="module" src="main.js"></script>
     <script type="module" src="menu.js"></script>
+    
+    
 
   </body>
 </html>
