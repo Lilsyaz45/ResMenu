@@ -3,17 +3,26 @@ html, body {
     padding: 0;
 }
 
-/* NAVBAR -------------------------------------------------- */
+body {
+  font-family: 'Serif', Georgia, serif;
+  background-color: white;
+  color: #1a1a1a;
+  line-height: 1.6;
+  overflow-x: hidden;
+  padding-top: 80px;
+}
 
 .navbar {
-  position: sticky;
+  position: fixed; /* change from sticky to fixed for reliability */
   top: 0;
+  left: 0;
+  width: 100%;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  transition: all 0.3s ease;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  transition: transform 0.3s ease; /* smooth hide/show */
 }
+
 
 .nav-container {
   max-width: 1200px;
@@ -35,12 +44,7 @@ html, body {
   color: #1a1a1a;
   font-size: 1rem;
   letter-spacing: 0.5px;
-  transition: opacity 0.3s ease;
   position: relative;
-}
-
-.nav-link:hover {
-  opacity: 0.6;
 }
 
 .nav-link::after {
