@@ -3,7 +3,6 @@
   align-self: flex-start;
   margin-bottom: -50px;
   margin-left: 100px;
-  /* padding: 20px 20px; */
   color: white;
   border-radius: 8px;
   font-family: 'Anton', sans-serif;
@@ -194,6 +193,11 @@
     }
     .reservation .btn {
         margin-left: 90px;
+    }
+    .go-back-btn {
+        margin-left: 20px;
+        font-size: 3rem;
+        margin-bottom: 20px;
     }
 }
 

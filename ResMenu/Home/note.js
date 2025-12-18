@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add a subtle pulse animation to the title
     const missionTitle = document.querySelector('.mission-title');
     
-    if (missionTitle) {
-        setTimeout(function() {
-            missionTitle.style.animation = 'pulse 2s infinite';
-        }, 2000);
-    }
+    // if (missionTitle) {
+    //     setTimeout(function() {
+    //         missionTitle.style.animation = 'pulse 2s infinite';
+    //     }, 2000);
+    // }
     
     // Create a typewriter effect for the mission text (optional)
     const missionText = document.querySelector('.mission-text');
