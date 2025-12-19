@@ -18,187 +18,211 @@
 <body class="bg-gray-900 text-white overflow-x-hidden">
 
 <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="nav-container">
-            <div class="nav-links">
-              <a href="/ResMenu/Welcome/welcome.html" class="nav-link">Welcome</a>
-              <a href="/ResMenu/Menu/menu.html" class="nav-link">Menu</a>
-              <a href="/ResMenu/Aboutus/aboutus.html" class="nav-link">About us</a>
-            </div>
-            <div class="nav-logo">
-              <a href="/ResMenu/Home/index.html" style="text-decoration: none; color: black;">
-              MOJO
-              </a>
-            </div>
-            <div  id="nav-2" class="nav-links">
-              <a href="/ResMenu/Home/index.html#story" class="nav-link">Story</a>
-              <a href="/ResMenu/Home/index.html#contact" class="nav-link">Contact</a>
-              <a href="/ResMenu/Reservation/reservation.html" class="nav-link" id="reservation">Reservation</a>
-            </div>
-          </div>
-    </nav>
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Desktop Navigation Links (Left) -->
+    <div class="nav-links">
+      <a href="/ResMenu/Welcome/welcome.html" class="nav-link">Welcome</a>
+      <a href="/ResMenu/Menu/menu.html" class="nav-link">Menu</a>
+      <a href="/ResMenu/Aboutus/aboutus.html" class="nav-link">About us</a>
+    </div>
+    
+    <!-- Logo - Center -->
+    <div class="nav-logo">
+      <a href="/ResMenu/Home/index.html" style="text-decoration: none; color: black;">
+        MOJO
+      </a>
+    </div>
+    
+    <!-- Desktop Navigation Links (Right) -->
+    <div id="nav-2" class="nav-links">
+      <a href="/ResMenu/Home/index.html#story" class="nav-link">Story</a>
+      <a href="/ResMenu/Home/index.html#contact" class="nav-link">Contact</a>
+      <a href="/ResMenu/Reservation/reservation.html" class="nav-link" id="reservation">Reservation</a>
+    </div>
+    
+    <!-- Hamburger Menu Button (Visible on Mobile) -->
+    <button class="hamburger-menu" id="hamburgerMenu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="/ResMenu/Welcome/welcome.html" class="mobile-nav-link">Welcome</a></li>
+      <li><a href="/ResMenu/Menu/menu.html" class="mobile-nav-link">Menu</a></li>
+      <li><a href="/ResMenu/Aboutus/aboutus.html" class="mobile-nav-link">About us</a></li>
+      <li><a href="/ResMenu/Home/index.html#story" class="mobile-nav-link">Story</a></li>
+      <li><a href="/ResMenu/Home/index.html#contact" class="mobile-nav-link">Contact</a></li>
+      <li><a href="/ResMenu/Reservation/reservation.html" class="mobile-nav-link" id="mobileReservation">Reservation</a></li>
+    </ul>
+  </div>
+</nav>
 
 <!-- GATE -->
-    <section id="gate"
-      class="h-screen w-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center"
-      style="background-image:url('https://res.cloudinary.com/dm05x6lbk/image/upload/v1765193475/Unknown_qbetim.png');">
-      <div class="absolute inset-0 bg-black/60"></div>
-      <div class="relative z-10 text-center opacity-0">
-        <h1 class="text-6xl md:text-7xl font-bold mb-4 tracking-wider" id="title">INTRODUCTION</h1>
-        <p class="text-xl md:text-2xl text-gray-300">Staff member of Mojo restaurant</p>
-      </div>
-    </section>
+<section id="gate"
+  class="h-screen w-screen flex items-center justify-center relative overflow-hidden bg-cover bg-center"
+  style="background-image:url('https://res.cloudinary.com/dm05x6lbk/image/upload/v1765193475/Unknown_qbetim.png');">
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative z-10 text-center opacity-0">
+    <h1 class="text-6xl md:text-7xl font-bold mb-4 tracking-wider" id="title">INTRODUCTION</h1>
+    <p class="text-xl md:text-2xl text-gray-300">Staff member of Mojo restaurant</p>
+  </div>
+</section>
 
 <!-- CHEF 1 -->
-    <section class="chef-section w-screen flex items-center justify-center relative bg-gray-800">
-      <div class="container mx-auto px-4 md:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <div class="chef-image will-animate order-2 md:order-1">
-            <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1765335875/gm_qx5szz.jpg"
-                alt="Chef Alex Vong"
-                class="w-full max-h-[420px] object-cover rounded-lg shadow-2xl">
-          </div>
-
-          <div class="chef-info will-animate order-1 md:order-2">
-            <span class="text-amber-500 text-lg font-semibold tracking-widest">Owner</span>
-            <h2 class="text-5xl md:text-6xl font-bold mt-2 mb-4">Alexander</h2>
-            <p><strong>Age:</strong> 42 Years</p>
-            <p><strong>Experience:</strong> 20 Years</p>
-            <p class="leading-relaxed mt-3">
-              A culinary visionary with two decades of experience in Michelin-starred kitchens.
-            </p>
-          </div>
-        </div>
+<section class="chef-section w-screen flex items-center justify-center relative bg-gray-800">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div class="chef-image will-animate order-2 md:order-1">
+        <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1765335875/gm_qx5szz.jpg"
+            alt="Chef Alex Vong"
+            class="w-full max-h-[420px] object-cover rounded-lg shadow-2xl">
       </div>
-    </section>
+
+      <div class="chef-info will-animate order-1 md:order-2">
+        <span class="text-amber-500 text-lg font-semibold tracking-widest">Owner</span>
+        <h2 class="text-5xl md:text-6xl font-bold mt-2 mb-4">Alexander</h2>
+        <p><strong>Age:</strong> 42 Years</p>
+        <p><strong>Experience:</strong> 20 Years</p>
+        <p class="leading-relaxed mt-3">
+          A culinary visionary with two decades of experience in Michelin-starred kitchens.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- CHEF 2 -->
-    <section class="chef-section w-screen flex items-center justify-center relative bg-gray-800">
-      <div class="container mx-auto px-4 md:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <div class="chef-info will-animate">
-            <span class="text-amber-500 text-lg font-semibold tracking-widest">General Manager</span>
-            <h2 class="text-5xl md:text-6xl font-bold mt-2 mb-4">Stephen Gerrade</h2>
-            <p><strong>Age:</strong> 50 Years</p>
-            <p><strong>Experience:</strong> 22 Years</p>
-            <p class="leading-relaxed mt-3">
-              A master of technique and coordination bringing harmony to every station.
-            </p>
-          </div>
-
-          <div class="chef-image will-animate">
-            <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1765336084/61314d055f92ca874a0f1b50d517ee28_pf3rs8.jpg"
-                class="w-full max-h-[420px] object-cover rounded-lg shadow-2xl">
-          </div>
-        </div>
+<section class="chef-section w-screen flex items-center justify-center relative bg-gray-800">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div class="chef-info will-animate">
+        <span class="text-amber-500 text-lg font-semibold tracking-widest">General Manager</span>
+        <h2 class="text-5xl md:text-6xl font-bold mt-2 mb-4">Stephen Gerrade</h2>
+        <p><strong>Age:</strong> 50 Years</p>
+        <p><strong>Experience:</strong> 22 Years</p>
+        <p class="leading-relaxed mt-3">
+          A master of technique and coordination bringing harmony to every station.
+        </p>
       </div>
-    </section>
+
+      <div class="chef-image will-animate">
+        <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1765336084/61314d055f92ca874a0f1b50d517ee28_pf3rs8.jpg"
+            class="w-full max-h-[420px] object-cover rounded-lg shadow-2xl">
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- CHEF 3 -->
-    <section class="chef-section w-screen flex items-center justify-center relative bg-gray-800">
-      <div class="container mx-auto px-4 md:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <div class="chef-image will-animate order-2 md:order-1 mr-20">
-            <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1765194800/2025-12-08_18.51.56_ezl539.jpg"
-                class="w-full max-h-[420px] object-cover rounded-lg shadow-2xl">
-          </div>
-
-          <div class="chef-info will-animate order-1 md:order-2">
-            <span class="text-amber-500 text-lg font-semibold tracking-widest">Head Chef</span>
-            <h2 class="text-5xl md:text-6xl font-bold mt-2 mb-4">TEP MENGKHIM</h2>
-            <p><strong>Age:</strong> 29 Years</p>
-            <p><strong>Experience:</strong> 8 Years</p>
-            <p class="leading-relaxed mt-3">
-              An artisan of flavors and textures crafting unforgettable dishes.
-            </p>
-          </div>
-        </div>
+<section class="chef-section w-screen flex items-center justify-center relative bg-gray-800">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div class="chef-image will-animate order-2 md:order-1 mr-20">
+        <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1765194800/2025-12-08_18.51.56_ezl539.jpg"
+            class="w-full max-h-[420px] object-cover rounded-lg shadow-2xl">
       </div>
-    </section>
+
+      <div class="chef-info will-animate order-1 md:order-2">
+        <span class="text-amber-500 text-lg font-semibold tracking-widest">Head Chef</span>
+        <h2 class="text-5xl md:text-6xl font-bold mt-2 mb-4">TEP MENGKHIM</h2>
+        <p><strong>Age:</strong> 29 Years</p>
+        <p><strong>Experience:</strong> 8 Years</p>
+        <p class="leading-relaxed mt-3">
+          An artisan of flavors and textures crafting unforgettable dishes.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- CHEF 4 -->
-    <section class="chef-section w-screen flex items-center justify-center relative bg-gray-800">
-      <div class="container mx-auto px-4 md:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <div class="chef-info will-animate">
-            <span class="text-amber-500 text-lg font-semibold tracking-widest">Head Chef Assistant</span>
-            <h2 class="text-5xl md:text-6xl font-bold mt-2 mb-4">Aron Ramsey</h2>
-            <p><strong>Age:</strong> 24 Years</p>
-            <p><strong>Experience:</strong> 3 Years</p>
-            <p class="leading-relaxed mt-3">
-              Fresh talent with boundless passion and creativity.
-            </p>
-          </div>
-
-          <div class="chef-image will-animate">
-            <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1765194802/2025-12-08_18.52.09_mhz5sx.jpg"
-                class="w-full max-h-[420px] object-cover rounded-lg shadow-2xl">
-          </div>
-        </div>
+<section class="chef-section w-screen flex items-center justify-center relative bg-gray-800">
+  <div class="container mx-auto px-4 md:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div class="chef-info will-animate">
+        <span class="text-amber-500 text-lg font-semibold tracking-widest">Head Chef Assistant</span>
+        <h2 class="text-5xl md:text-6xl font-bold mt-2 mb-4">Aron Ramsey</h2>
+        <p><strong>Age:</strong> 24 Years</p>
+        <p><strong>Experience:</strong> 3 Years</p>
+        <p class="leading-relaxed mt-3">
+          Fresh talent with boundless passion and creativity.
+        </p>
       </div>
-    </section>
+
+      <div class="chef-image will-animate">
+        <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1765194802/2025-12-08_18.52.09_mhz5sx.jpg"
+            class="w-full max-h-[420px] object-cover rounded-lg shadow-2xl">
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER SECTION -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3 class="footer-title">MENU</h3>
-                <ul class="footer-menu">
-                    <li><a href="/ResMenu/Welcome/welcome.html" class="footer-link">WELCOME</a></li>
-                    <li><a href="/ResMenu/Menu/menu.html" class="footer-link">MENU</a></li>
-                    <li><a href="/ResMenu/Aboutus/aboutus.html" class="footer-link">ABOUT US</a></li>
-                    <li><a href="#story" class="footer-link">STORY</a></li>
-                    <li><a href="/ResMenu/Reservation/reservation.html" class="footer-link">RESERVATION</a></li>
-                </ul>
-            </div>
-            
-            <!-- OUR LOCATION Section -->
-            <div class="footer-section">
-                <h3 class="footer-title">OUR LOCATION</h3>
-                <div class="location-info">
-                    <div class="location-item">
-                        <h4 class="location-title">Norodom Boulevard</h4>
-                        <a style="color: black;" href="https://www.google.com/maps/place/CADT+-+Innovation+Center/@11.654289,104.908848,17z/data=!3m1!4b1!4m6!3m5!1s0x310953bad45e4ee1:0x6c33cb023d508017!8m2!3d11.654289!4d104.9114229!16s%2Fg%2F11fk3ch43d?entry=ttu&g_ep=EgoyMDI1MTIwNy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank">
-                            #317 St. Norodom Blvd (245), Phnom Penh, Cambodia
-                        </a>
-                    </div>
-                    <div class="location-item">
-                        <h4 class="location-title">Toul Tompoung</h4>
-                        <a style="color: black" href="https://www.google.com/maps/place/CADT+-+Innovation+Center/@11.654289,104.908848,17z/data=!3m1!4b1!4m6!3m5!1s0x310953bad45e4ee1:0x6c33cb023d508017!8m2!3d11.654289!4d104.9114229!16s%2Fg%2F11fk3ch43d?entry=ttu&g_ep=EgoyMDI1MTIwNy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank">
-                            #92 St. 454 Toul Tompoung, Phnom Penh, Cambodia
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- CONTACT US Section -->
-            <div id="contact" class="footer-section">
-                <h3 class="footer-title">CONTACT US</h3>
-                <p class="contact-text">We are available on some social below!</p>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/share/1BbRwnBZMD/?mibextid=wwXIfr" target="_blank" class="social-link" aria-label="Facebook">
-                        <i class='bxl  bx-facebook'></i> 
-                    </a>
-                    <a href="https://www.instagram.com/tepkengmengkhim?igsh=YThyNXlldzN4c3Bz&utm_source=qr" target="_blank" class="social-link" aria-label="Instagram">
-                        <i class='bxl  bx-instagram'></i> 
-                    </a>
-                    <a href="https://t.me/TEPKHENGMENGKHIM" target="_blank" class="social-link" aria-label="telegram">
-                        <i class='bxl  bx-telegram'></i> 
-                    </a>
-                    <a href="https://www.tiktok.com/@khimz2222?_r=1&_t=ZS-92KLH8fmSO5" class="social-link" aria-label="tiktok ">
-                        <i class="bxl bx-tiktok"></i>
-                    </a>
-                     <a href="#" class="social-link" aria-label="mail">
-                        <i class='bxl  bx-gmail'></i> 
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3 class="footer-title">MENU</h3>
+            <ul class="footer-menu">
+                <li><a href="/ResMenu/Welcome/welcome.html" class="footer-link">WELCOME</a></li>
+                <li><a href="/ResMenu/Menu/menu.html" class="footer-link">MENU</a></li>
+                <li><a href="/ResMenu/Aboutus/aboutus.html" class="footer-link">ABOUT US</a></li>
+                <li><a href="#story" class="footer-link">STORY</a></li>
+                <li><a href="/ResMenu/Reservation/reservation.html" class="footer-link">RESERVATION</a></li>
+            </ul>
+        </div>
+        
+        <!-- OUR LOCATION Section -->
+        <div class="footer-section">
+            <h3 class="footer-title">OUR LOCATION</h3>
+            <div class="location-info">
+                <div class="location-item">
+                    <h4 class="location-title">Norodom Boulevard</h4>
+                    <a style="color: black;" href="https://www.google.com/maps/place/CADT+-+Innovation+Center/@11.654289,104.908848,17z/data=!3m1!4b1!4m6!3m5!1s0x310953bad45e4ee1:0x6c33cb023d508017!8m2!3d11.654289!4d104.9114229!16s%2Fg%2F11fk3ch43d?entry=ttu&g_ep=EgoyMDI1MTIwNy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank">
+                        #317 St. Norodom Blvd (245), Phnom Penh, Cambodia
                     </a>
                 </div>
-              
+                <div class="location-item">
+                    <h4 class="location-title">Toul Tompoung</h4>
+                    <a style="color: black" href="https://www.google.com/maps/place/CADT+-+Innovation+Center/@11.654289,104.908848,17z/data=!3m1!4b1!4m6!3m5!1s0x310953bad45e4ee1:0x6c33cb023d508017!8m2!3d11.654289!4d104.9114229!16s%2Fg%2F11fk3ch43d?entry=ttu&g_ep=EgoyMDI1MTIwNy4wIKXMDSoKLDEwMDc5MjA3M0gBUAM%3D" target="_blank">
+                        #92 St. 454 Toul Tompoung, Phnom Penh, Cambodia
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="footer-bottom">
-            <h2 class="footer-logo">MOJO</h3>
-            <p class="footer-copy">&copy; 2025 Mojo.</p>
-    </footer>
+        
+        <!-- CONTACT US Section -->
+        <div id="contact" class="footer-section">
+            <h3 class="footer-title">CONTACT US</h3>
+            <p class="contact-text">We are available on some social below!</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/1BbRwnBZMD/?mibextid=wwXIfr" target="_blank" class="social-link" aria-label="Facebook">
+                    <i class='bxl  bx-facebook'></i> 
+                </a>
+                <a href="https://www.instagram.com/tepkengmengkhim?igsh=YThyNXlldzN4c3Bz&utm_source=qr" target="_blank" class="social-link" aria-label="Instagram">
+                    <i class='bxl  bx-instagram'></i> 
+                </a>
+                <a href="https://t.me/TEPKHENGMENGKHIM" target="_blank" class="social-link" aria-label="telegram">
+                    <i class='bxl  bx-telegram'></i> 
+                </a>
+                <a href="https://www.tiktok.com/@khimz2222?_r=1&_t=ZS-92KLH8fmSO5" class="social-link" aria-label="tiktok ">
+                    <i class="bxl bx-tiktok"></i>
+                </a>
+                 <a href="#" class="social-link" aria-label="mail">
+                    <i class='bxl  bx-gmail'></i> 
+                </a>
+            </div>
+          
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <h2 class="footer-logo">MOJO</h3>
+        <p class="footer-copy">&copy; 2025 Mojo.</p>
+</footer>
 
 <script src="aboutus.js"></script>
 <script src="/ResMenu/Navbar/navbar.js"></script>

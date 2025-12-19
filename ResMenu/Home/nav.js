@@ -1,9 +1,9 @@
-// navbar.js
+
 document.addEventListener('DOMContentLoaded', () => {
   const navbar = document.querySelector('.navbar');
   let lastScrollY = window.scrollY;
 
-  if (!navbar) return; // safety check
+  if (!navbar) return;
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > lastScrollY) {

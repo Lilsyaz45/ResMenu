@@ -27,21 +27,45 @@
     <!-- NAVBAR ------------------------------------------------ -->
     <nav class="navbar">
       <div class="nav-container">
+        <!-- Desktop Navigation Links (Left) -->
         <div class="nav-links">
           <a href="/ResMenu/Welcome/welcome.html" class="nav-link">Welcome</a>
           <a href="/ResMenu/Menu/menu.html" class="nav-link">Menu</a>
           <a href="/ResMenu/Aboutus/aboutus.html" class="nav-link">About us</a>
         </div>
+        
+        <!-- Logo - Center -->
         <div class="nav-logo">
           <a href="index.html" style="text-decoration: none; color: black;">
-          MOJO
+            MOJO
           </a>
         </div>
-        <div  id="nav-2" class="nav-links">
+        
+        <!-- Desktop Navigation Links (Right) -->
+        <div id="nav-2" class="nav-links">
           <a href="#story" class="nav-link">Story</a>
           <a href="#contact" class="nav-link">Contact</a>
           <a href="/ResMenu/Reservation/reservation.html" class="nav-link" id="reservation">Reservation</a>
         </div>
+        
+        <!-- Hamburger Menu Button (Visible on Mobile) -->
+        <button class="hamburger-menu" id="hamburgerMenu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu Overlay -->
+      <div class="mobile-menu-overlay" id="mobileMenu">
+        <ul class="mobile-nav-links">
+          <li><a href="/ResMenu/Welcome/welcome.html" class="mobile-nav-link">Welcome</a></li>
+          <li><a href="/ResMenu/Menu/menu.html" class="mobile-nav-link">Menu</a></li>
+          <li><a href="/ResMenu/Aboutus/aboutus.html" class="mobile-nav-link">About us</a></li>
+          <li><a href="#story" class="mobile-nav-link">Story</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+          <li><a href="/ResMenu/Reservation/reservation.html" class="mobile-nav-link" id="mobileReservation">Reservation</a></li>
+        </ul>
       </div>
     </nav>
 
@@ -158,17 +182,14 @@
           <source src="https://res.cloudinary.com/dm05x6lbk/video/upload/v1764687787/2025-12-02_22.02.32_oxe2l7.mp4" type="video/mp4"> <!-- Add your video -->
         </video>
 
-        <!-- INNER SHADOW OVERLAY -->
         <div class="overlay"></div>
 
-        <!-- TEXT AREA -->
         <div class="chef-info">
           <h2 class="chef-name-kh">ម៉េងឃីម</h2>
           <h3 class="chef-name-en">MengKhim</h3>
           <p class="chef-title">Head Chef</p>
         </div>
 
-        <!-- PERSON PHOTO -->
         <div class="chef-photo">
           <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1764684814/IMAGE_2025-12-02_14_08_37-removebg-preview_d3qf8r.png" alt="Chef Photo"> <!-- Add your chef image -->
         </div>
@@ -262,7 +283,56 @@
     <script type="module" src="main.js"></script>
     <script src="script.js"></script>
     <script src="note.js"></script>
-
+    
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        hamburgerMenu.addEventListener('click', function() {
+          mobileMenu.classList.toggle('active');
+          
+          // Animate hamburger to X
+          const lines = document.querySelectorAll('.hamburger-line');
+          if (mobileMenu.classList.contains('active')) {
+            lines[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+            lines[1].style.opacity = '0';
+            lines[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+          } else {
+            lines[0].style.transform = 'none';
+            lines[1].style.opacity = '1';
+            lines[2].style.transform = 'none';
+          }
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            const lines = document.querySelectorAll('.hamburger-line');
+            lines[0].style.transform = 'none';
+            lines[1].style.opacity = '1';
+            lines[2].style.transform = 'none';
+          });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+          const isClickInsideNavbar = document.querySelector('.navbar').contains(event.target);
+          const isClickInsideMobileMenu = mobileMenu.contains(event.target);
+          
+          if (!isClickInsideNavbar && !isClickInsideMobileMenu && mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            const lines = document.querySelectorAll('.hamburger-line');
+            lines[0].style.transform = 'none';
+            lines[1].style.opacity = '1';
+            lines[2].style.transform = 'none';
+          }
+        });
+      });
+    </script>
 
   </body>
 </html>

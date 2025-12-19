@@ -1,4 +1,4 @@
-/* GO BACK BUTTON ------------------------------------------ */
+/* GO BACK BUTTON  */
 .go-back-btn {
   align-self: flex-start;
   margin-bottom: -50px;
@@ -21,9 +21,9 @@
   border-color: rgb(225, 220, 191);
 }
 
-/* RESERVATION SECTION --------------------------------------- */
+/* RESERVATION SECTION*/
 .reservation {
-    position: relative; /* needed for overlay */
+    position: relative;
     background: url('/ResMenu/img/bg1.jpg') no-repeat center center;
     background-size: cover;
     padding: 48px 0px;
@@ -34,7 +34,6 @@
     overflow: hidden;
 }
 
-/* Dark overlay */
 .reservation::before {
     content: "";
     position: absolute;
@@ -42,8 +41,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* adjust 0.4 for darkness */
-    z-index: 0; /* behind form and content */
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
 }
 
 /* Title */
@@ -54,7 +53,7 @@
     letter-spacing: 2px;
     margin-bottom: 40px;
     text-align: center;
-    position: relative; /* above overlay */
+    position: relative;
     z-index: 1;
 }
 
@@ -62,23 +61,22 @@
     color: rgb(225, 220, 220); 
 }
 
-/* FORM ------------------------------------------------------- */
+/* FORM */
 .reservation form {
     width: 100%;
     max-width: 700px;
     padding: clamp(16px, 5vw, 40px);
-    border-radius: 20px; /* rounded corners */
-    background: rgba(255, 255, 255, 0.15); /* transparent background */
-    backdrop-filter: blur(10px); /* blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* subtle border */
+    border-radius: 20px; 
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
     position: relative;
-    z-index: 1; /* above overlay */
+    z-index: 1; 
     box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
 }
 
-/* Input rows */
 .reservation .input-box {
     display: flex;
     gap: 20px;
@@ -87,18 +85,17 @@
     
 }
 
-/* Inputs & Textarea */
 .reservation input,
 .reservation textarea {
     flex: 1;
     padding: 16px 20px;
     font-size: clamp(1rem, 2.5vw, 1.1rem);
-    color: white; /* black text */
-    background: transparent; /* white semi-transparent blur */
+    color: white;
+    background: transparent;
     backdrop-filter: transparent; 
     -webkit-backdrop-filter: transparent; 
     border-radius: 10px;
-    border: 1.5px solid rgba(255, 255, 255, 0.2); /* subtle black border */
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
     outline: none;
     transition: all 0.3s ease;
 }
@@ -112,30 +109,28 @@
     margin-top: 10px;
 }
 
-/* Focus style */
 .reservation input:focus,
 .reservation textarea:focus {
-    border-color: #000000; /* black focus */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* subtle black glow */
+    border-color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
-/* Placeholder color */
 .reservation input::placeholder,
 .reservation textarea::placeholder {
     color: white;
     font-style: italic;
 }
 
-/* BUTTON ------------------------------------------------------ */
+/* BUTTON */
 .reservation .btn {
     margin-top: 30px;
     padding: 12px 30px;
     background: transparent;
-    color: white; /* black text */
+    color: white;
     font-family: 'Anton', sans-serif;
     font-size: 1.2rem;
     letter-spacing: 1px;
-    border: 2px solid white; /* black border */
+    border: 2px solid white;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -144,13 +139,12 @@
 }
 
 .reservation .btn:hover {
-    background: #000000; /* black background on hover */
-    color: #FFFFFF; /* white text on hover */
+    background: #000000;
+    color: #FFFFFF;
     transform: scale(1.05);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* ALERT BOX STYLE */
 .custom-alert {
     position: fixed;
     top: 20px;
@@ -168,8 +162,8 @@
     animation: fadeInOut 4s forwards;
 }
 
-.custom-alert.success { background-color: #000000; } /* black success */
-.custom-alert.error   { background-color: #333333; } /* dark gray error */
+.custom-alert.success { background-color: #000000; } 
+.custom-alert.error   { background-color: #333333; } 
 
 @keyframes fadeInOut {
     0% { opacity: 0; transform: translate(-50%, -20px); }

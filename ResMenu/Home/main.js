@@ -1,5 +1,4 @@
-// ---------------- HERO SLIDESHOW ----------------
-
+// ---------------- HERO SLIDESHOW 
 const slides = [
   {
     letters: ["S","T","E","A","K"],

@@ -1,6 +1,4 @@
-// ==============================
 // SCROLL HIGHLIGHT & MENU TOGGLE
-// ==============================
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let sections = document.querySelectorAll('section');
@@ -29,9 +27,7 @@ if (menuIcon) {
     });
 }
 
-// ==============================
 // RESERVATION FORM SUBMISSION
-// ==============================
 const reservationForm = document.querySelector(".reservation form");
 
 if (reservationForm) {
@@ -47,7 +43,6 @@ if (reservationForm) {
             });
 
             if (response.ok) {
-                // SUCCESS: show elegant black overlay alert
                 showAlert("✅ Reservation sent successfully! Thank you.", "success");
                 reservationForm.reset();
             } else {
@@ -60,17 +55,14 @@ if (reservationForm) {
     });
 }
 
-// ==============================
 // ALERT FUNCTION (MATCHES CSS)
-// ==============================
 function showAlert(message, type) {
     const alertBox = document.createElement("div");
     alertBox.textContent = message;
-    alertBox.className = `custom-alert ${type}`; // type = success | error
+    alertBox.className = `custom-alert ${type}`; 
 
     document.body.appendChild(alertBox);
 
-    // Remove after 4 seconds
     setTimeout(() => {
         alertBox.remove();
     }, 4000);
