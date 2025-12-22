@@ -2,18 +2,18 @@
 const slides = [
   {
     letters: ["S","T","E","A","K"],
-    imgSrc: "/ResMenu/img/hero.png",
+    imgSrc: "steak.png",
     imgAlt: "Premium Steak",
-    scale: 1.4,
+    scale: 1,
     offsetY: "-50%",
     fontSize: "18vw",        // recommended: use vw so letters scale with viewport
     lettersGap: "clamp(0.5rem, 10vw, 6rem)"
   },
   {
     letters: ["P","A","S","T","A"],
-    imgSrc: "/ResMenu/img/hero1.png",
+    imgSrc: "pasta.png",
     imgAlt: "Pasta Dish",
-    scale: 1.05,
+    scale: 1,
     offsetY: "-50%",
     fontSize: "18vw",        // recommended: use vw so letters scale with viewport
     lettersGap: "clamp(0.5rem, 10vw, 6rem)"
