@@ -14,7 +14,7 @@ body {
 /* RESERVATION SECTION */
 .reservation {
     position: relative;
-    background: url('/ResMenu/img/bg1.jpg') no-repeat center center;
+    background: url('/img/bg1.jpg') no-repeat center center;
     background-size: cover;
     padding: 60px 20px;
     display: flex;
