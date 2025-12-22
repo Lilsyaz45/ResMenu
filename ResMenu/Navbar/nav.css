@@ -1,0 +1,265 @@
+/* ===== GLOBAL FIX ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding-top: 80px; /* Prevent content hiding under fixed navbar */
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: env(safe-area-inset-top); /* iPhone notch fix */
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  position: relative;
+}
+
+/* ===== DESKTOP NAV LINKS ===== */
+.nav-links:first-child {
+  display: flex;
+  gap: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  flex: 1;
+  justify-content: flex-start;
+}
+
+#nav-2.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+/* ===== LOGO ===== */
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  letter-spacing: 2px;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-link {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #555;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #1a1a1a;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== RESERVATION BUTTON ===== */
+#reservation {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 8px;
+  color: black;
+  min-width: 110px;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  background: transparent;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+#reservation:hover {
+  transform: scale(1.05);
+  background-color: black;
+  color: white;
+}
+
+#reservation::after {
+  display: none !important;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  margin-left: auto;
+  margin-top: 7px;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: #1a1a1a;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 80px;
+  right: 1rem;
+  width: 100%;
+  max-width: 320px;
+  background: white;
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  border-radius: 12px;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 0.3rem 0;
+}
+
+.mobile-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #1a1a1a;
+  transition: width 0.3s ease;
+}
+
+.mobile-nav-link:hover::after {
+  width: 100%;
+}
+
+/* ===== MOBILE RESERVATION BUTTON ===== */
+#mobileReservation {
+  border: 1.5px solid black;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+#mobileReservation:hover {
+  background-color: black;
+  color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .nav-links:first-child,
+  #nav-2.nav-links {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .nav-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 70px;
+  }
+
+  .nav-container {
+    height: 70px;
+    padding: 0 1rem;
+  }
+
+  .nav-logo {
+    font-size: 1.3rem;
+  }
+
+  .hamburger-menu {
+    width: 22px;
+    height: 16px;
+  }
+
+  .mobile-menu-overlay {
+    top: 70px;
+    max-width: 280px;
+  }
+}

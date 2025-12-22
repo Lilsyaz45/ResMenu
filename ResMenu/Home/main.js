@@ -6,7 +6,8 @@ const slides = [
     imgAlt: "Premium Steak",
     scale: 1.4,
     offsetY: "-50%",
-    fontSize:"300px"
+    fontSize: "18vw",        // recommended: use vw so letters scale with viewport
+    lettersGap: "clamp(0.5rem, 10vw, 6rem)"
   },
   {
     letters: ["P","A","S","T","A"],
@@ -14,7 +15,8 @@ const slides = [
     imgAlt: "Pasta Dish",
     scale: 1.05,
     offsetY: "-50%",
-    fontSize: "300px"
+    fontSize: "18vw",        // recommended: use vw so letters scale with viewport
+    lettersGap: "clamp(0.5rem, 10vw, 6rem)"
   }
 ];
 

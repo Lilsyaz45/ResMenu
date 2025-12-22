@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MOJO Restaurant</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/ResMenu/Navbar/nav.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -85,20 +86,22 @@
 
     <!-- PROMOTION SECTION -->
      
-      <div class="promotion-section">
-        <div class="promotion-img">
-          <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654951/IMAGE_2025-12-02_12_55_45_j3umwk.jpg" alt="Promotion Image">
-        </div>
-        <div class="promotion-head">
-          <h1>Promotion</h1>
-          <p style="font-weight: 800; font-family: 'Inter', sans-serif;">
-            Cambo Set <span style="font-weight: 600; font-family: 'Inter', sans-serif;">Price: $25</span>
-          </p>
-          <p style="font-family: 'Inter', sans-serif;">
-            Christmas special combo set for 2 people
-          </p>
-        </div>
-      </div>
+<div class="promotion-section">
+  <div class="promotion-img">
+    <img src="https://res.cloudinary.com/dm05x6lbk/image/upload/v1764654951/IMAGE_2025-12-02_12_55_45_j3umwk.jpg" alt="Promotion Image">
+  </div>
+
+  <div class="promotion-head">
+    <h1>Promotion</h1>
+    <p class="price">
+      Cambo Set <span>Price: $25</span>
+    </p>
+    <p class="desc">
+      Christmas special combo set for 2 people
+    </p>
+  </div>
+</div>
+
 
     <!-- POPULAR SECTION -->
       <div class="popular-section">
@@ -107,7 +110,7 @@
         </div>
         <div class="popular-head">
           <h1>Popular</h1>
-          <p>Duck Breast with Berry Reduction Sauce</p>
+          <p>Duck Breast <br>with Berry Reduction Sauce</p>
           <p><span style="font-weight: 600; font-size: 20px; font-family: 'Inter', sans-serif;">Price: $12.99</span></p>
         </div>
       </div>
@@ -283,56 +286,9 @@
     <script type="module" src="main.js"></script>
     <script src="script.js"></script>
     <script src="note.js"></script>
+
     
-    <!-- Mobile Menu Toggle Script -->
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const hamburgerMenu = document.getElementById('hamburgerMenu');
-        const mobileMenu = document.getElementById('mobileMenu');
-        
-        hamburgerMenu.addEventListener('click', function() {
-          mobileMenu.classList.toggle('active');
-          
-          // Animate hamburger to X
-          const lines = document.querySelectorAll('.hamburger-line');
-          if (mobileMenu.classList.contains('active')) {
-            lines[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-            lines[1].style.opacity = '0';
-            lines[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-          } else {
-            lines[0].style.transform = 'none';
-            lines[1].style.opacity = '1';
-            lines[2].style.transform = 'none';
-          }
-        });
-        
-        // Close mobile menu when clicking a link
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-            const lines = document.querySelectorAll('.hamburger-line');
-            lines[0].style.transform = 'none';
-            lines[1].style.opacity = '1';
-            lines[2].style.transform = 'none';
-          });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-          const isClickInsideNavbar = document.querySelector('.navbar').contains(event.target);
-          const isClickInsideMobileMenu = mobileMenu.contains(event.target);
-          
-          if (!isClickInsideNavbar && !isClickInsideMobileMenu && mobileMenu.classList.contains('active')) {
-            mobileMenu.classList.remove('active');
-            const lines = document.querySelectorAll('.hamburger-line');
-            lines[0].style.transform = 'none';
-            lines[1].style.opacity = '1';
-            lines[2].style.transform = 'none';
-          }
-        });
-      });
-    </script>
+    
 
   </body>
 </html>
