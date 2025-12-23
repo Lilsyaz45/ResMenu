@@ -89,11 +89,18 @@ body {
 }
 
 #gate {
-    background-attachment: fixed;
+    background-attachment: scroll; /* works on iOS */
     background-size: cover;
     background-position: center;
-    
 }
+
+@supports (-webkit-touch-callout: none) {
+  #gate {
+      background-attachment: scroll; /* iOS fallback */
+  }
+}
+
+
 
 * {
             -webkit-font-smoothing: antialiased;
@@ -344,6 +351,8 @@ section#gate,
     align-items: center;
     width: 100%;
   }
+
+  
   
   /* Fix for alternating layout on mobile */
   .grid {
