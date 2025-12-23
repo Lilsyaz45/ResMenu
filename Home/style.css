@@ -68,9 +68,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%, 0);
+  will-change: transform, opacity, filter;
   z-index: 2;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
   pointer-events: none;
 }
 
@@ -79,6 +79,8 @@ body {
   width: auto;
   max-width: 100%;
   max-height: 100vh;
+  pointer-events: none;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
 }
 
 /*Promotion & Popular Container*/

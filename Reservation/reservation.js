@@ -67,3 +67,4 @@ function showAlert(message, type) {
         alertBox.remove();
     }, 4000);
 }
+
