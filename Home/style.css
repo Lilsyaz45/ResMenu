@@ -42,6 +42,7 @@ body {
   justify-content: center;
   overflow: hidden;
   padding: clamp(20px, 5vw, 60px) 0;
+  
 }
 
 .hero-text {
@@ -520,6 +521,39 @@ body {
     order: 1;
   }
 }
+
+/* ===== iPhone 12 Pro Max FINAL OVERRIDE ===== */
+@media (max-width: 430px) {
+
+  .special-container {
+    padding: 20px;
+    gap: 60px;
+    margin-top: -120px ;
+  }
+
+  .promotion-section,
+  .popular-section {
+    height: auto ;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .promotion-section .promotion-img,
+  .popular-section .popular-img {
+    max-width: 320px;
+    height: 480px;
+    margin: 0 auto;
+  }
+
+  .promotion-head,
+  .popular-head {
+    padding: 30px 20px;
+    text-align: center;
+  }
+}
+
+
+
 
 
 
@@ -1245,3 +1279,4 @@ h2, .chef-name-kh, .chef-name-en {
 p, .mission-text, .footer-link, .location-address, .contact-text {
   font-size: clamp(0.95rem, 2.5vw, 1.1rem);
 }
+

@@ -79,14 +79,16 @@ function renderSlide(idx) {
 }
 
 // First display
+heroText.style.opacity = 1;
+heroImage.style.opacity = 1;
 renderSlide(current);
 
 // Auto-slide every 4 seconds
 setInterval(() => {
-  renderSlide(current);
   current = (current + 1) % slides.length;
   renderSlide(current);
 }, 4000);
+
 
 
 
