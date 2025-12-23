@@ -204,8 +204,6 @@ body {
   width: 100%;
 }
 
-
-
 @media (max-width: 768px) {
   .special-container {
     padding: 20px;
@@ -425,7 +423,6 @@ body {
   font-size: 15px;
 }
 }
-
 
 @media (max-width: 500px) {
   .special-container {
@@ -1151,7 +1148,9 @@ body {
 @media (max-width: 500px) and (max-width: 767px) {
 .nav-container { flex-direction: column; align-items: center; gap: 10px; padding: 1rem;  }
 .nav-logo { font-size: 1.6rem; }
-
+.chef-name-en { font-size: 1.2rem; margin-left: -30px;}
+.chef-name-kh { font-size: 1.2rem; margin-left: -30px; }
+.chef-title { font-size: 1.2rem; margin-left: -30px; }
 .promotion-section { flex-direction: column; height: auto; padding: 5px 5px; } 
 .promotion-section .promotion-img { width: 300px; height: 250px; margin: 0 auto 15px; } 
 .promotion-section .p{ width: 100px; display: flex; text-align: center; justify-content: center; margin-left: 100px; margin-right:10px ; padding: 100px;}
@@ -1166,7 +1165,7 @@ body {
     .carousel-container { height: 450px; }
     .card { width: 240px; height: 350px; }
     .arrow { width: 50px; height: 50px; font-size: 24px; }
-
+  
 }
 
 
@@ -1175,6 +1174,9 @@ body {
     .carousel-container { height: 400px; }
     .card { width: 200px; height: 300px; }
     .arrow { width: 40px; height: 40px; font-size: 20px; }
+    .chef-name-en { font-size: 1.2rem; margin-left: -30px;}
+    .chef-name-kh { font-size: 1.2rem; margin-left: -30px; }
+    .chef-title { font-size: 1.2rem; margin-left: -30px; }
 }
 
 @media (max-width: 768px) {
@@ -1195,6 +1197,7 @@ body {
     .signature-name {
         font-size: 20px;
     }
+    .chef-photo img { max-height: 900px;}
 }
 
 @media (max-width: 480px) {
@@ -1209,7 +1212,11 @@ body {
     .mission-text {
         font-size: 16px;
     }
-}
+    .chef-name-en { font-size: 1.2rem; margin-left: -30px;}
+    .chef-name-kh { font-size: 1.2rem; margin-left: -30px; }
+    .chef-title { font-size: 1.2rem; margin-left: -30px; }
+    .chef-photo img { max-height: 450px; margin-right: -100px;}
+  }
 @media (max-width: 768px) {
     .footer-container {
         grid-template-columns: 1fr;
