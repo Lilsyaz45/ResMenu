@@ -163,6 +163,8 @@ body, html {
   opacity: 1;
   transition: opacity 0.5s ease;
   pointer-events: none;
+  will-change: opacity;
+  transform: translateZ(0);
 }
 
 .box.playing .box-video {

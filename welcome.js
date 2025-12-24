@@ -6,9 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const source = video.querySelector("source");
     let loaded = false;
 
-    box.addEventListener("mouseenter", async () => {
-      box.classList.add("playing");
-
+    const playVideo = async () => {
       if (!loaded) {
         source.src = source.dataset.src;
         video.load();
@@ -17,13 +15,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         await video.play();
+        box.classList.add("playing");
       } catch (e) {
         console.log(e);
       }
-    });
+    };
 
-    box.addEventListener("mouseleave", () => {
+    const stopVideo = () => {
       video.pause();
-    });
+      box.classList.remove("playing");
+    };
+
+    /* Desktop */
+    box.addEventListener("mouseenter", playVideo);
+    box.addEventListener("mouseleave", stopVideo);
+
+    /* Mobile (iOS & Android) */
+    box.addEventListener("touchstart", playVideo, { passive: true });
   });
 });
