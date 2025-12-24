@@ -99,6 +99,22 @@ body, html {
   }
 }
 
+@media (max-width: 430px){
+  .landing {
+    min-height: 100vh;
+  }
+  .center-text {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    margin-top: 190px;
+  }
+  .center-text .subtitle {
+    font-size: clamp(0.8rem, 3vw, 1rem);
+    margin-bottom: 260px;
+  }
+}
+
+
+
 .box {
   position: relative;
   flex: 1;
