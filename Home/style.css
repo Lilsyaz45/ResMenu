@@ -107,13 +107,15 @@ body {
   position: absolute;
   width: 450px;
   max-width: 450px;
-  height: 600px;
+  height: 578px;
   aspect-ratio: 450 / 600;
   z-index: 20;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   overflow: hidden;
   margin-left: 120px;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 .promotion-section .promotion-img img {
@@ -130,7 +132,7 @@ body {
   flex-direction: column;
   align-items: end;
   text-align: end;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   margin-top: 100px;
 }
@@ -164,7 +166,9 @@ body {
   height: 600px;
   aspect-ratio: 450 / 600;
   z-index: 20;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  will-change: transform;
+  transform: translateZ(0);
   border-radius: 8px;
   overflow: hidden;
   right: 120px;
@@ -189,7 +193,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
   box-sizing: border-box;
   margin-top: 100px;
   margin-left: 0;
@@ -220,6 +224,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 40px;
+    
   }
   
   .promotion-section .promotion-img,
@@ -233,7 +238,7 @@ body {
     margin-right: auto;
     left: auto;
     right: auto;
-    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.2));
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   }
   
   .promotion-section .promotion-img img,
@@ -241,6 +246,9 @@ body {
     width: 100%;
     height: 480px;
     object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    will-change: transform;
+    transform: translateZ(0);
   }
   
   .promotion-head,
@@ -256,10 +264,10 @@ body {
     padding: 30px 20px;
     align-items: center;
     text-align: center;
-    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.2));
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   }
 
   
@@ -324,7 +332,7 @@ body {
   height: 600px;
   aspect-ratio: 450 / 600;
   z-index: 20;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   overflow: hidden;
   margin-left: 50px;
@@ -345,7 +353,6 @@ body {
   flex-direction: column;
   align-items: end;
   text-align: end;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
   box-sizing: border-box;
   margin-top: 100px;
   ;
@@ -381,7 +388,6 @@ body {
   height: 600px;
   aspect-ratio: 450 / 600;
   z-index: 20;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
   border-radius: 8px;
   overflow: hidden;
   right: 30px;
@@ -406,7 +412,6 @@ body {
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-  filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.3));
   box-sizing: border-box;
   margin-top: 100px;
   margin-left: 0;
@@ -455,7 +460,7 @@ body {
     margin-right: auto;
     left: auto;
     right: auto;
-    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.2));
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
   }
 
   .promotion-img{
@@ -482,7 +487,7 @@ body {
     padding: 30px 20px;
     align-items: center;
     text-align: center;
-    filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.2));
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
