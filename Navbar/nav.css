@@ -1,13 +1,12 @@
-/* ===== GLOBAL FIX ===== */
 * {
   box-sizing: border-box;
 }
 
 body {
-  padding-top: 80px; /* Prevent content hiding under fixed navbar */
+  padding-top: 80px; 
 }
 
-/* ===== NAVBAR ===== */
+/*  NAVBAR  */
 .navbar {
   position: fixed;
   top: 0;
@@ -18,7 +17,7 @@ body {
   z-index: 1000;
   transition: transform 0.3s ease;
   border-bottom: 1px solid rgba(4, 3, 3, 0.1);
-  padding-top: env(safe-area-inset-top); /* iPhone notch fix */
+  padding-top: env(safe-area-inset-top); 
 }
 
 .nav-container {
@@ -31,7 +30,6 @@ body {
   position: relative;
 }
 
-/* ===== DESKTOP NAV LINKS ===== */
 .nav-links:first-child {
   display: flex;
   gap: 2.5rem;
@@ -48,7 +46,6 @@ body {
   justify-content: flex-end;
 }
 
-/* ===== LOGO ===== */
 .nav-logo {
   font-size: 1.8rem;
   font-weight: 500;
@@ -62,7 +59,6 @@ body {
   
 }
 
-/* ===== NAV LINKS ===== */
 .nav-link {
   text-decoration: none;
   color: #1a1a1a;
@@ -93,7 +89,7 @@ body {
   width: 100%;
 }
 
-/* ===== RESERVATION BUTTON ===== */
+/* RESERVATION BUTTON  */
 #reservation {
   display: flex;
   border: 2px solid black;
@@ -120,7 +116,7 @@ body {
   display: none !important;
 }
 
-/* ===== HAMBURGER MENU ===== */
+/* HAMBURGER MENU  */
 .hamburger-menu {
   display: none;
   flex-direction: column;
@@ -144,7 +140,7 @@ body {
   transition: all 0.3s ease;
 }
 
-/* ===== MOBILE MENU ===== */
+/*  MOBILE MENU */
 .mobile-menu-overlay {
   position: fixed;
   top: 80px;
@@ -207,7 +203,7 @@ body {
   width: 100%;
 }
 
-/* ===== MOBILE RESERVATION BUTTON ===== */
+/* MOBILE RESERVATION BUTTON  */
 #mobileReservation {
   border: 1.5px solid black;
   border-radius: 6px;
@@ -222,7 +218,7 @@ body {
   color: white;
 }
 
-/* ===== RESPONSIVE ===== */
+/* RESPONSIVE  */
 @media (max-width: 900px) {
   .nav-links:first-child,
   #nav-2.nav-links {

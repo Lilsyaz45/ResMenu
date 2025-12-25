@@ -1,139 +1,210 @@
 html, body {
     margin: 0;
     padding: 0;
-}
-
-body {
-  font-family: 'Serif', Georgia, serif;
-  background-color: white;
-  color: #1a1a1a;
-  line-height: 1.6;
-  overflow-x: hidden;
-  padding-top: 80px;
-}
-
-
-
-.chef-section {
-  min-height: 100vh; /* desktop safe */
-  padding-block: 4rem; /* space for animation */
-}
-
-/* DESKTOP STYLING - KEEP YOUR ORIGINAL LAYOUT */
-.chef-image img {
-    width: auto; /* Let height control the size */
-    height: 100vh; /* Full viewport height */
-    max-height: 800px; /* Optional: limit maximum height */
-    object-fit: cover; /* Crop to fit height */
-    object-position: center; /* Center the crop */
-    margin-left: 100px;
-    border-radius: 8px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-
-/* MOBILE FIX - ONLY APPLIES ON MOBILE */
-@media (max-width: 768px) {
-  .chef-section {
-    min-height: auto;     /* ✅ allow content height */
-    padding-block: 3rem;  /* ✅ extra space */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* center everything on mobile */
-    justify-content: center;
-  }
-  
-  /* FIX FOR MOBILE IMAGES - CENTERED AND SAME SIZE */
-  .chef-image {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    order: 2; /* images come after text on mobile */
-  }
-  
-  .chef-image img {
-    width: 100%;
-    max-width: 350px; /* Same size for all images */
-    height: 400px; /* Same height for all images */
-    margin-left: 0; /* Remove the desktop margin */
-    margin-right: 0;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 8px;
-  }
-  
-  .chef-info {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    width: 100%;
-    order: 1; /* text comes before images on mobile */
-    padding: 0 20px;
-  }
-  
-  .chef-info h2 {
-    font-size: 2.5rem;
-  }
-  
-  #title {
-    font-size: 2rem;
-  }
- 
-
+    overflow-x: hidden;
 }
 
-.chef-info {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+.about-us-body {
+    font-family: 'Serif', Georgia, serif;
+    background-color: #111827;
+    color: white;
+    line-height: 1.6;
+    padding-top: 80px;
 }
 
+/* GATE SECTION */
 #gate {
-    background-attachment: scroll; /* works on iOS */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-image: url('https://res.cloudinary.com/dm05x6lbk/image/upload/v1766393211/IMAGE_2025-12-22_15_46_10_ibiftk.jpg');
     background-size: cover;
     background-position: center;
 }
 
-@supports (-webkit-touch-callout: none) {
-  #gate {
-      background-attachment: scroll; /* iOS fallback */
-  }
+.gate-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
+.gate-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
 
+#title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    letter-spacing: 0.1em;
+}
 
-* {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        .will-animate {
-            will-change: transform;
-        }
-/* FOOTER */
-.content-placeholder {
-    flex: 1;
-    padding: 2rem;
+.gate-subtitle {
+    font-size: 1rem;
+    color: #d1d5db;
+}
+
+@media (min-width: 768px) {
+    #title {
+        font-size: 4.5rem;
+    }
+    
+    .gate-subtitle {
+        font-size: 1.5rem;
+    }
+}
+
+/* CHEF SECTIONS */
+.chef-section {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f2937;
+    min-height: 100vh;
+    padding: 4rem 0;
+}
+
+.chef-container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+    .chef-container {
+        padding: 0 4rem;
+    }
+}
+
+.chef-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .chef-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+    
+    .chef-grid-reverse .chef-info {
+        order: 1;
+    }
+    
+    .chef-grid-reverse .chef-image {
+        order: 2;
+    }
+}
+
+.chef-img {
     width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-.content-placeholder h1 {
-    font-size: 2.5rem;
+/* Desktop styling for chef images */
+@media (min-width: 768px) {
+    .chef-img {
+        width: auto;
+        height: 100vh;
+        max-height: 800px;
+        object-fit: cover;
+        object-position: center;
+        margin-left: 100px;
+    }
+}
+
+.chef-role {
+    color: #f59e0b;
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    display: block;
+}
+
+.chef-name {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
-    color: #222;
 }
 
-.content-placeholder p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-    color: #555;
+@media (min-width: 768px) {
+    .chef-name {
+        font-size: 3.75rem;
+    }
 }
 
-/* Footer Styles */
+.chef-description {
+    line-height: 1.75;
+    margin-top: 0.75rem;
+}
+
+.chef-info p {
+    margin: 0.5rem 0;
+}
+
+/* MOBILE STYLES */
+@media (max-width: 768px) {
+    .chef-section {
+        min-height: auto;
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .chef-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    .chef-img {
+        width: 100%;
+        max-width: 350px;
+        height: 400px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .chef-info {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        width: 100%;
+        padding: 0 1.25rem;
+    }
+    
+    .chef-name {
+        font-size: 2.5rem;
+    }
+    
+    #title {
+        font-size: 2rem;
+    }
+}
+
+/* FOOTER STYLES */
 .footer {
-    background-color: #ffffff; /* white background */
-    color: #000000; /* black text */
+    background-color: #ffffff;
+    color: #000000;
     padding: 3rem 0 2rem;
     font-family: 'Inter', sans-serif;
 }
@@ -161,20 +232,20 @@ body {
     padding-bottom: 0.5rem;
 }
 
-/* subtle underline */
 .footer-title::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
     width: 40px;
-    height: 1px; /* thinner line for luxury feel */
+    height: 1px;
     background-color: #000000;
 }
 
-/* Menu Styles */
 .footer-menu {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .footer-menu li {
@@ -186,20 +257,17 @@ body {
     text-decoration: none;
     font-weight: 400;
     font-size: 1rem;
-    transition: color 0.3s, padding-left 0.3s;
-    display: inline-block;
 }
 
 .footer-link:hover {
-    color: #555555; /* subtle hover */
-    padding-left: 5px;
+    color: #555555;
 }
 
-/* Location Styles */
 .location-info {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    margin-top: -25px;
 }
 
 .location-item {
@@ -214,34 +282,29 @@ body {
     color: #000000;
 }
 
-.location-address {
+.location-item a {
     color: #333333;
     font-size: 0.95rem;
     line-height: 1.5;
+    text-decoration: none;
 }
 
-/* Contact Styles */
+.location-item a:hover {
+    text-decoration: underline;
+}
+
 .contact-text {
     color: #333333;
     margin-bottom: 1.5rem;
     font-size: 1rem;
+        margin-top: -5px
 }
 
 .social-links {
     display: flex;
     gap: 1rem;
     margin-bottom: 2.5rem;
-    
 }
-
-.social-link i {
-    font-size: 1.5rem; /* increase from default 1.2rem */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-}
-
 
 .social-link {
     display: flex;
@@ -249,17 +312,19 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: #f5f5f5; /* light grey for subtle luxury */
+    background-color: #f5f5f5;
     border-radius: 50%;
     color: #000000;
     text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
 }
 
 .social-link:hover {
     background-color: #000000;
     color: #ffffff;
-    transform: translateY(-3px);
+}
+
+.social-link i {
+    font-size: 1.5rem;
 }
 
 .footer-bottom {
@@ -269,13 +334,64 @@ body {
     text-align: center;
     font-size: small;
     color: #000000;
-    
-}
-.footer-logo{
-    font-family: 'Serif', Georgia, serif;
 }
 
-/* --- Responsive About Us --- */
+.footer-logo {
+    font-family: 'Serif', Georgia, serif;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.footer-copy {
+    margin: 0.5rem 0;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    #gate,
+    .chef-section {
+        min-height: 320px;
+        padding: 12px 0;
+    }
+    
+    .chef-container {
+        padding: 0 8px;
+    }
+    
+    .chef-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .chef-image {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    .chef-img {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        height: 400px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+}
+
+@media (max-height: 500px) {
+    #gate,
+    .chef-section {
+        min-height: 180px;
+        padding: 4px 0;
+    }
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .nav-container {
@@ -294,109 +410,13 @@ body {
 }
 
 @media (max-width: 500px) and (max-width: 767px) {
-.nav-container { flex-direction: column; align-items: center; gap: 10px; padding: 1rem; }
-.nav-logo { font-size: 1.6rem; }
-}
-
-section#gate,
-.chef-section {
-    min-height: 60vh;
-    width: 100%;
-    max-width: 100vw;
-    overflow: hidden;
-    padding: clamp(16px, 5vw, 40px) 0;
-    
-}
-
-@media (max-width: 768px) {
-    section#gate,
-    .chef-section {
-        min-height: 320px;
-        padding: 12px 0;
-    }
-    .container {
-        padding: 0 8px;
-    }
-}
-
-@media (max-height: 500px) {
-    section#gate,
-    .chef-section {
-        min-height: 180px;
-        padding: 4px 0;
-    }
-    
-}
-
-.chef-info h2, .chef-info h3 {
-    font-size: clamp(1.2rem, 4vw, 2.5rem);
-}
-.chef-info p {
-    font-size: clamp(1rem, 2.5vw, 1.2rem);
-}
-
-/* EXTRA MOBILE FIXES FOR IMAGES */
-@media (max-width: 768px) {
-  /* Ensure all chef sections stack properly on mobile */
-  .chef-section > .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  .nav-container { 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 1rem; 
   }
-  
-  .chef-section > .container > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  
-  
-  /* Fix for alternating layout on mobile */
-  .grid {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-  }
-  
-  .grid-cols-1 {
-    grid-template-columns: 1fr !important;
-  }
-  
-  .md\:grid-cols-2 {
-    grid-template-columns: 1fr !important;
-  }
-  
-  /* Ensure images are centered and same size */
-  .chef-image {
-    margin: 0 auto !important;
-    width: 90% !important;
-    max-width: 400px !important;
-  }
-  
-  .chef-image img {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100% !important;
-    height: 400px !important;
-  }
-  
-  /* Fix order for alternating sections */
-  .order-2 {
-    order: 2 !important;
-  }
-  
-  .order-1 {
-    order: 1 !important;
-  }
-  
-  .md\:order-1 {
-    order: 1 !important;
-  }
-  
-  .md\:order-2 {
-    order: 2 !important;
+  .nav-logo { 
+    font-size: 1.6rem; 
   }
 }

@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let loaded = false;
 
     const playVideo = async () => {
-      // ⛔ STOP others first (mobile fix)
       stopAllVideos();
 
       if (!loaded) {
@@ -37,11 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
       box.classList.remove("playing");
     };
 
-    /* Desktop hover */
     box.addEventListener("mouseenter", playVideo);
     box.addEventListener("mouseleave", stopVideo);
 
-    /* Mobile touch */
     box.addEventListener("touchstart", playVideo, { passive: true });
   });
 });

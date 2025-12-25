@@ -1,5 +1,4 @@
 // /ResMenu/Menu/menu.js
-
 import { menuItems, dessertItems, drinkItems, wineItems } from "./menuData.js";
 
 function renderMenu(items, rowSelector) {

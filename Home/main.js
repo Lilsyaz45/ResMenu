@@ -1,4 +1,4 @@
-// ---------------- HERO SLIDESHOW 
+//HERO SLIDESHOW 
 const slides = [
   {
     letters: ["S","T","E","A","K"],
@@ -6,7 +6,7 @@ const slides = [
     imgAlt: "Premium Steak",
     scale: 1,
     offsetY: "-50%",
-    fontSize: "18vw",        // recommended: use vw so letters scale with viewport
+    fontSize: "18vw",      
     lettersGap: "clamp(0.5rem, 10vw, 6rem)"
   },
   {
@@ -15,7 +15,7 @@ const slides = [
     imgAlt: "Pasta Dish",
     scale: 1,
     offsetY: "-50%",
-    fontSize: "18vw",        // recommended: use vw so letters scale with viewport
+    fontSize: "18vw",     
     lettersGap: "clamp(0.5rem, 10vw, 6rem)"
   }
 ];
@@ -25,18 +25,14 @@ let current = 0;
 const heroText = document.getElementById("heroText");
 const heroImage = document.getElementById("heroImage");
 const heroImgContainer = document.querySelector(".hero-image-container");
+const slideDuration = 600;
 
-// Slide animation speed
-const slideDuration = 600; // ms
-
-// Apply initial CSS for animation
 heroText.style.transition = `transform ${slideDuration}ms ease, opacity ${slideDuration}ms ease`;
 heroImage.style.transition = `transform ${slideDuration}ms ease, opacity ${slideDuration}ms ease`;
 
 function renderSlide(idx) {
   const slide = slides[idx];
 
-  // Reset transform to slide-in state
   heroText.style.transform = "translateX(100px)";
   heroImage.style.transform = "translateX(100px)";
   heroText.style.opacity = 0;
@@ -45,13 +41,10 @@ function renderSlide(idx) {
   heroImgContainer.style.display = "block";
 
   setTimeout(() => {
-    // Set letter spacing
     heroText.style.gap = slide.lettersGap || "4rem";
 
-    // Clear old letters
     heroText.innerHTML = "";
 
-    // Add new letters
     slide.letters.forEach(letter => {
       const h = document.createElement("h1");
       h.className = "hero-title";
@@ -59,15 +52,12 @@ function renderSlide(idx) {
       heroText.append(h);
     });
 
-    // Update hero image
     heroImage.src = slide.imgSrc;
     heroImage.alt = slide.imgAlt;
 
-    // Apply offset + scale
     heroImgContainer.style.transform = 
       `translate(-50%, ${slide.offsetY}) scale(${slide.scale})`;
 
-    // Animate slide in
     requestAnimationFrame(() => {
       heroText.style.transform = "translateX(0)";
       heroImage.style.transform = "translateX(0)";
@@ -78,12 +68,10 @@ function renderSlide(idx) {
   }, slideDuration);
 }
 
-// First display
 heroText.style.opacity = 1;
 heroImage.style.opacity = 1;
 renderSlide(current);
 
-// Auto-slide every 4 seconds
 setInterval(() => {
   current = (current + 1) % slides.length;
   renderSlide(current);
