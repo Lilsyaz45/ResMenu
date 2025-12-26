@@ -88,7 +88,7 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-
+  margin-bottom: 100px;
 }
 
 /* Promotion */
@@ -100,6 +100,8 @@ body {
   background-color: white;
   justify-content: space-between;
   position: relative;
+  margin-bottom: 100px;
+  
 }
 
 .promotion-section .promotion-img {
@@ -133,7 +135,7 @@ body {
   text-align: end;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
-  margin-top: 100px;
+  margin-top: 8px;
 }
 
 .promotion-section h1 {
@@ -194,7 +196,7 @@ body {
   text-align: left;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
   box-sizing: border-box;
-  margin-top: 100px;
+  margin-top: 8px;
   margin-left: 0;
   order: 1;
 }
