@@ -68,7 +68,7 @@ function renderSlide(idx) {
   }, slideDuration);
 }
 
-heroText.style.opacity = 1;
+heroText.style.opacity = 0;
 heroImage.style.opacity = 0;
 renderSlide(current);
 
