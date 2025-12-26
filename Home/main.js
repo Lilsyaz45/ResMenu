@@ -25,7 +25,7 @@ let current = 0;
 const heroText = document.getElementById("heroText");
 const heroImage = document.getElementById("heroImage");
 const heroImgContainer = document.querySelector(".hero-image-container");
-const slideDuration = 600;
+const slideDuration = 600; //ms
 
 heroText.style.transition = `transform ${slideDuration}ms ease, opacity ${slideDuration}ms ease`;
 heroImage.style.transition = `transform ${slideDuration}ms ease, opacity ${slideDuration}ms ease`;
@@ -69,7 +69,7 @@ function renderSlide(idx) {
 }
 
 heroText.style.opacity = 1;
-heroImage.style.opacity = 1;
+heroImage.style.opacity = 0;
 renderSlide(current);
 
 setInterval(() => {
